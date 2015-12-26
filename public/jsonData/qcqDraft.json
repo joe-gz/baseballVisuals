@@ -1,0 +1,158 @@
+{
+  "query": {
+    "count": 1,
+    "created": "2015-12-25T00:08:22Z",
+    "lang": "en-US",
+    "diagnostics": {
+      "publiclyCallable": "true",
+      "url": {
+        "execution-start-time": "0",
+        "execution-stop-time": "426",
+        "execution-time": "426",
+        "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/draftresults"
+      },
+      "user-time": "435",
+      "service-time": "426",
+      "build-version": "0.2.925"
+    },
+    "results": {
+      "league": {
+        "league_key": "346.l.82326",
+        "league_id": "82326",
+        "name": "Parr's Double Gun Show",
+        "url": "http://baseball.fantasysports.yahoo.com/b1/82326",
+        "league_chat_id": "5m4715lt66cnlp01miqtqsmqdirw6y0",
+        "draft_status": "postdraft",
+        "num_teams": "12",
+        "edit_key": "2015-12-24",
+        "weekly_deadline": "intraday",
+        "league_update_timestamp": "1444030932",
+        "scoring_type": "head",
+        "league_type": "private",
+        "renew": "328_63623",
+        "renewed": null,
+        "short_invitation_url": "https://yho.com/mlb?l=82326&ikey=ceb4c16d74e588fa",
+        "is_pro_league": "0",
+        "is_cash_league": "0",
+        "current_week": "25",
+        "start_week": "1",
+        "start_date": "2015-04-05",
+        "end_week": "25",
+        "end_date": "2015-10-04",
+        "is_finished": "1",
+        "game_code": "mlb",
+        "season": "2015",
+        "draft_results": {
+          "count": "300",
+          "draft_result": [
+            {
+              "pick": "1",
+              "round": "1",
+              "cost": "49",
+              "team_key": "346.l.82326.t.12",
+              "player_key": "346.p.8180"
+            },
+            {
+              "pick": "2",
+              "round": "1",
+              "cost": "25",
+              "team_key": "346.l.82326.t.9",
+              "player_key": "346.p.8578"
+            },
+            {
+              "pick": "3",
+              "round": "1",
+              "cost": "33",
+              "team_key": "346.l.82326.t.12",
+              "player_key": "346.p.7497"
+            },
+            {
+              "pick": "4",
+              "round": "1",
+              "cost": "23",
+              "team_key": "346.l.82326.t.11",
+              "player_key": "346.p.8622"
+            },
+            {
+              "pick": "5",
+              "round": "1",
+              "cost": "48",
+              "team_key": "346.l.82326.t.8",
+              "player_key": "346.p.7977"
+            },
+            {
+              "pick": "6",
+              "round": "1",
+              "cost": "20",
+              "team_key": "346.l.82326.t.12",
+              "player_key": "346.p.7963"
+            },
+            {
+              "pick": "7",
+              "round": "1",
+              "cost": "36",
+              "team_key": "346.l.82326.t.12",
+              "player_key": "346.p.7812"
+            },
+            {
+              "pick": "8",
+              "round": "1",
+              "cost": "37",
+              "team_key": "346.l.82326.t.3",
+              "player_key": "346.p.7487"
+            },
+            {
+              "pick": "9",
+              "round": "1",
+              "cost": "45",
+              "team_key": "346.l.82326.t.5",
+              "player_key": "346.p.7163"
+            },
+            {
+              "pick": "10",
+              "round": "1",
+              "cost": "31",
+              "team_key": "346.l.82326.t.2",
+              "player_key": "346.p.8562"
+            },
+            {
+              "pick": "11",
+              "round": "1",
+              "cost": "29",
+              "team_key": "346.l.82326.t.10",
+              "player_key": "346.p.7850"
+            },
+            {
+              "pick": "12",
+              "round": "1",
+              "cost": "12",
+              "team_key": "346.l.82326.t.4",
+              "player_key": "346.p.7711"
+            },
+            {
+              "pick": "13",
+              "round": "2",
+              "cost": "32",
+              "team_key": "346.l.82326.t.1",
+              "player_key": "346.p.8175"
+            },
+            {
+              "pick": "14",
+              "round": "2",
+              "cost": "31",
+              "team_key": "346.l.82326.t.7",
+              "player_key": "346.p.8590"
+            },
+            {
+              "pick": "15",
+              "round": "2",
+              "cost": "21",
+              "team_key": "346.l.82326.t.12",
+              "player_key": "346.p.6619"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,8 @@
   angular
   .module("fsVisual", [
     "ui.router",
-    "comments"
+    "comments",
+    "leagues"
   ])
   .config([
     "$stateProvider",
@@ -33,6 +34,18 @@
       templateUrl: "js/comments/show.html",
       controller: "CommentShowController",
       controllerAs: "CommentShowViewModel"
+    })
+    .state("leagueIndex", {
+      url: "/leagues",
+      templateUrl: "js/leagues/index.html",
+      controller: "LeagueIndexController",
+      controllerAs: "LeagueIndexViewModel"
+    })
+    .state("leagueShow", {
+      url: "/leagues/:id",
+      templateUrl: "js/leagues/show.html",
+      controller: "LeagueShowController",
+      controllerAs: "LeagueShowViewModel"
     });
   }
 }());

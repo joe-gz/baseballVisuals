@@ -1,0 +1,9 @@
+<h2>{{LeagueShowViewModel.league.query.results.league.name}}</h2>
+
+<div data-ng-repeat="result in LeagueShowViewModel.league.query.results.league.draft_results.draft_result">
+  <p>{{result.player_key}}</p>
+</div>
+
+<div data-ng-repeat="player in LeagueShowViewModel.players.query.results.player">
+  <p>{{player.full}}</p>
+</div>

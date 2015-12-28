@@ -1,0 +1,95 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-12-27T00:22:05Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "3",
+    "execution-stop-time": "292",
+    "execution-time": "289",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.7497/stats"
+   },
+   "javascript": {
+    "execution-start-time": "1",
+    "execution-stop-time": "294",
+    "execution-time": "293",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "296",
+   "service-time": "289",
+   "build-version": "0.2.925"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.7497",
+    "player_id": "7497",
+    "name": {
+     "full": "Robinson Canó",
+     "first": "Robinson",
+     "last": "Canó",
+     "ascii_first": "Robinson",
+     "ascii_last": "Cano"
+    },
+    "editorial_player_key": "mlb.p.7497",
+    "editorial_team_key": "mlb.t.12",
+    "editorial_team_full_name": "Seattle Mariners",
+    "editorial_team_abbr": "Sea",
+    "uniform_number": "22",
+    "display_position": "2B",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/1pGOhe5BRk1ya2iLawHTeA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/7497.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/1pGOhe5BRk1ya2iLawHTeA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/7497.png",
+    "is_undroppable": "0",
+    "position_type": "B",
+    "eligible_positions": {
+     "position": [
+      "2B",
+      "MI",
+      "Util"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "60",
+        "value": "179/624"
+       },
+       {
+        "stat_id": "7",
+        "value": "82"
+       },
+       {
+        "stat_id": "12",
+        "value": "21"
+       },
+       {
+        "stat_id": "13",
+        "value": "79"
+       },
+       {
+        "stat_id": "16",
+        "value": "2"
+       },
+       {
+        "stat_id": "3",
+        "value": ".287"
+       },
+       {
+        "stat_id": "55",
+        "value": ".780"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-12-27T00:04:27Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "2",
+    "execution-stop-time": "239",
+    "execution-time": "237",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.8180/stats"
+   },
+   "javascript": {
+    "execution-start-time": "1",
+    "execution-stop-time": "240",
+    "execution-time": "239",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "242",
+   "service-time": "237",
+   "build-version": "0.2.925"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.8180",
+    "player_id": "8180",
+    "name": {
+     "full": "Clayton Kershaw",
+     "first": "Clayton",
+     "last": "Kershaw",
+     "ascii_first": "Clayton",
+     "ascii_last": "Kershaw"
+    },
+    "editorial_player_key": "mlb.p.8180",
+    "editorial_team_key": "mlb.t.19",
+    "editorial_team_full_name": "Los Angeles Dodgers",
+    "editorial_team_abbr": "LAD",
+    "uniform_number": "22",
+    "display_position": "SP",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/UlpyXp3AgCrACz8GIuS1nw--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/8180.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/UlpyXp3AgCrACz8GIuS1nw--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/8180.png",
+    "is_undroppable": "0",
+    "position_type": "P",
+    "eligible_positions": {
+     "position": [
+      "SP",
+      "P"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "50",
+        "value": "232.2"
+       },
+       {
+        "stat_id": "28",
+        "value": "16"
+       },
+       {
+        "stat_id": "32",
+        "value": "0"
+       },
+       {
+        "stat_id": "42",
+        "value": "301"
+       },
+       {
+        "stat_id": "26",
+        "value": "2.13"
+       },
+       {
+        "stat_id": "27",
+        "value": "0.88"
+       },
+       {
+        "stat_id": "56",
+        "value": "7.17"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -4,6 +4,6 @@
   <p>{{result.player_key}}</p>
 </div>
 
-<div data-ng-repeat="player in LeagueShowViewModel.players.query.results.player">
-  <p>{{player.full}}</p>
+<div data-ng-repeat="listed in LeagueShowViewModel.playerList">
+  <p>{{listed.name}}</p>
 </div>

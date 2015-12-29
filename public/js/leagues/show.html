@@ -6,6 +6,7 @@
 <!-- <charter></charter> -->
 
 <div data-ng-repeat="listed in LeagueShowViewModel.playerList">
+  <img data-ng-src="{{listed.photo}}" alt="" />
   <p>Name: {{listed.name}}</p>
   <p>Draft Round: {{listed.round}}</p>
   <p>Cost: {{listed.cost}}</p>

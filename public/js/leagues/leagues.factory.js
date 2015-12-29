@@ -8,14 +8,10 @@
     LeagueFactoryFunction
   ]);
 
-  function LeagueFactoryFunction($resource){
-    return $resource("/jsonData/qcqDraft.json", {}, {
-      query: {method:'GET'}
+  function LeagueFactoryFunction($resource,league_id){
+    return $resource("/jsonData/:league_id.json", {}, {
+      query: {method:'GET'},
+      update: {method: "PUT"}
     });
-
-    // $http.get('/jsonData/qcqDraft.json').success(function(data){
-    //   console.log(data);
-    //   return data
-    // });
   }
 }());

@@ -37,6 +37,7 @@
           for (var j = 0; j < playerArray.length; j++){
             if (playerArray[j].id === playerData.query.results.player.player_key){
               playerArray[j].name = playerData.query.results.player.name.full;
+              playerArray[j].photo = playerData.query.results.player.headshot.url;
             }
           }
         });

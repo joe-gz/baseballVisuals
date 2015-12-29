@@ -1,5 +1,7 @@
 <h2>These are Leagues</h2>
 
+<div data-league-form data-league="LeagueIndexViewModel.leagues"></div>
+
 <div data-ng-repeat="league in LeagueIndexViewModel.leagues">
   <p><a data-ui-sref="leagueShow({id: league.results.league.league_id})">{{league.results.league.name}}</a></p>
 </div>

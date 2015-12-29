@@ -1,0 +1,233 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-12-28T21:38:39Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "1",
+    "execution-stop-time": "209",
+    "execution-time": "208",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=238.l.627060/settings"
+   },
+   "user-time": "216",
+   "service-time": "208",
+   "build-version": "0.2.925"
+  },
+  "results": {
+   "league": {
+    "league_key": "238.l.627060",
+    "league_id": "627060",
+    "name": "SubRelegationMinorLittleLeague",
+    "url": "http://baseball.fantasysports.yahoo.com/archive/mlb/2010/627060",
+    "league_chat_id": null,
+    "draft_status": "postdraft",
+    "num_teams": "9",
+    "edit_key": "2015-12-28",
+    "weekly_deadline": "intraday",
+    "league_update_timestamp": "1286182269",
+    "scoring_type": "roto",
+    "league_type": "private",
+    "renew": null,
+    "renewed": null,
+    "short_invitation_url": null,
+    "is_pro_league": "0",
+    "is_cash_league": "0",
+    "start_date": "2010-04-04",
+    "end_date": "2010-10-03",
+    "is_finished": "1",
+    "game_code": "mlb",
+    "season": "2010",
+    "settings": {
+     "draft_type": "live",
+     "is_auction_draft": "1",
+     "scoring_type": "roto",
+     "uses_playoff": "0",
+     "waiver_type": "R",
+     "waiver_rule": "all",
+     "uses_faab": "0",
+     "draft_time": "1270245600",
+     "post_draft_players": "W",
+     "max_teams": "14",
+     "waiver_time": "2",
+     "trade_end_date": "2010-08-15",
+     "trade_ratify_type": "vote",
+     "trade_reject_time": "2",
+     "player_pool": "ALL",
+     "cant_cut_list": "yahoo",
+     "is_publicly_viewable": "1",
+     "roster_positions": {
+      "roster_position": [
+       {
+        "position": "C",
+        "position_type": "B",
+        "count": "1"
+       },
+       {
+        "position": "1B",
+        "position_type": "B",
+        "count": "1"
+       },
+       {
+        "position": "2B",
+        "position_type": "B",
+        "count": "1"
+       },
+       {
+        "position": "3B",
+        "position_type": "B",
+        "count": "1"
+       },
+       {
+        "position": "SS",
+        "position_type": "B",
+        "count": "1"
+       },
+       {
+        "position": "OF",
+        "position_type": "B",
+        "count": "3"
+       },
+       {
+        "position": "Util",
+        "position_type": "B",
+        "count": "2"
+       },
+       {
+        "position": "SP",
+        "position_type": "P",
+        "count": "2"
+       },
+       {
+        "position": "RP",
+        "position_type": "P",
+        "count": "2"
+       },
+       {
+        "position": "P",
+        "position_type": "P",
+        "count": "4"
+       },
+       {
+        "position": "BN",
+        "count": "5"
+       },
+       {
+        "position": "DL",
+        "count": "1"
+       }
+      ]
+     },
+     "stat_categories": {
+      "stats": {
+       "stat": [
+        {
+         "stat_id": "60",
+         "enabled": "1",
+         "name": "H/AB",
+         "display_name": "H/AB",
+         "sort_order": "1",
+         "position_type": "B",
+         "is_only_display_stat": "1"
+        },
+        {
+         "stat_id": "7",
+         "enabled": "1",
+         "name": "Runs",
+         "display_name": "R",
+         "sort_order": "1",
+         "position_type": "B"
+        },
+        {
+         "stat_id": "12",
+         "enabled": "1",
+         "name": "Home Runs",
+         "display_name": "HR",
+         "sort_order": "1",
+         "position_type": "B"
+        },
+        {
+         "stat_id": "13",
+         "enabled": "1",
+         "name": "Runs Batted In",
+         "display_name": "RBI",
+         "sort_order": "1",
+         "position_type": "B"
+        },
+        {
+         "stat_id": "16",
+         "enabled": "1",
+         "name": "Stolen Bases",
+         "display_name": "SB",
+         "sort_order": "1",
+         "position_type": "B"
+        },
+        {
+         "stat_id": "3",
+         "enabled": "1",
+         "name": "Batting Average",
+         "display_name": "AVG",
+         "sort_order": "1",
+         "position_type": "B"
+        },
+        {
+         "stat_id": "50",
+         "enabled": "1",
+         "name": "Innings Pitched",
+         "display_name": "IP",
+         "sort_order": "1",
+         "position_type": "P",
+         "is_only_display_stat": "1"
+        },
+        {
+         "stat_id": "28",
+         "enabled": "1",
+         "name": "Wins",
+         "display_name": "W",
+         "sort_order": "1",
+         "position_type": "P"
+        },
+        {
+         "stat_id": "32",
+         "enabled": "1",
+         "name": "Saves",
+         "display_name": "SV",
+         "sort_order": "1",
+         "position_type": "P"
+        },
+        {
+         "stat_id": "42",
+         "enabled": "1",
+         "name": "Strikeouts",
+         "display_name": "K",
+         "sort_order": "1",
+         "position_type": "P"
+        },
+        {
+         "stat_id": "26",
+         "enabled": "1",
+         "name": "Earned Run Average",
+         "display_name": "ERA",
+         "sort_order": "0",
+         "position_type": "P"
+        },
+        {
+         "stat_id": "27",
+         "enabled": "1",
+         "name": "(Walks + Hits)/ Innings Pitched",
+         "display_name": "WHIP",
+         "sort_order": "0",
+         "position_type": "P"
+        }
+       ]
+      }
+     },
+     "season_type": "full",
+     "max_games_played": "162",
+     "max_innings_pitched": "1250"
+    }
+   }
+  }
+ }
+}

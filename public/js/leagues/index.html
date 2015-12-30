@@ -1,7 +1,11 @@
-<h2>These are Leagues</h2>
+<h2>Search for Your League</h2>
 
-<div data-league-form data-league="LeagueIndexViewModel.leagues"></div>
+<!-- <div data-league-form data-league="LeagueIndexViewModel.league"></div> -->
+<form>
+  <input placeholder="League ID" data-ng-model="league_id"></input>
+  <a data-ui-sref="leagueShow({id:league_id})"><button type="button">Find League</button></a>
+</form>
 
-<div data-ng-repeat="league in LeagueIndexViewModel.leagues">
+<!-- <div data-ng-repeat="league in LeagueIndexViewModel.leagues">
   <p><a data-ui-sref="leagueShow({id: league.results.league.league_id})">{{league.results.league.name}}</a></p>
-</div>
+</div> -->

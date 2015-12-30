@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("leagues")
+  .module("players")
   .factory("PlayerFactory", [
     "$resource",
     PlayerFactoryFunction

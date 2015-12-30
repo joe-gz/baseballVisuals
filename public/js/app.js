@@ -14,8 +14,9 @@
   .module("fsVisual", [
     "ui.router",
     "comments",
-    "leagues"
-  ])
+    "leagues",
+    "players"
+    ])
   .config([
     "$stateProvider",
     RouterFunction
@@ -46,6 +47,12 @@
       templateUrl: "js/leagues/show.html",
       controller: "LeagueShowController",
       controllerAs: "LeagueShowViewModel"
+    })
+    .state("playerShow", {
+      url: "/players/:id",
+      templateUrl: "js/players/show.html",
+      controller: "PlayerShowController",
+      controllerAs: "PlayerShowViewModel"
     });
   }
 }());

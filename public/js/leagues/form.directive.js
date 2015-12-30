@@ -17,7 +17,9 @@
       },
       link: function(scope){
         scope.findLeague = function(){
-          console.log("click");
+          this.leagues = LeagueFactory.get({league_id: scope.league_id});
+          console.log(this.leagues);
+          $state.go("leagueIndex", {}, {reload: true});
         }
       }
     }

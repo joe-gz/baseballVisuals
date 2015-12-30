@@ -1,13 +1,14 @@
 <h2>{{LeagueShowViewModel.league.query.results.league.name}}</h2>
-<!--
-<div data-ng-repeat="result in LeagueShowViewModel.league.query.results.league.draft_results.draft_result">
-  <p>{{result.player_key}}</p>
-</div> -->
-<!-- <charter></charter> -->
+
+<div ng-controller="LeagueShowController">
+    {{LeagueShowViewModel.playerPrice}}
+    <bars-chart chart-data="LeagueShowViewModel"></bars-chart>
+</div>
 
 <div data-ng-repeat="listed in LeagueShowViewModel.playerList">
   <img data-ng-src="{{listed.photo}}" alt="" />
-  <p>Name: {{listed.name}}</p>
+  <p>Name: <a data-ui-sref="playerShow({id:listed.shortID})">{{listed.name}}</a></p>
+  <p>Positions: {{listed.position}}</p>
   <p>Draft Round: {{listed.round}}</p>
   <p>Cost: {{listed.cost}}</p>
 </div>

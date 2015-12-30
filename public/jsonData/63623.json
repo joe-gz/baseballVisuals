@@ -1,0 +1,94 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-12-29T20:19:59Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "1",
+    "execution-stop-time": "320",
+    "execution-time": "319",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=328.l.63623/draftresults"
+   },
+   "user-time": "330",
+   "service-time": "319",
+   "build-version": "0.2.925"
+  },
+  "results": {
+   "league": {
+    "league_key": "328.l.63623",
+    "league_id": "63623",
+    "name": "Parr's Double Gun Show",
+    "url": "http://baseball.fantasysports.yahoo.com/archive/mlb/2014/63623",
+    "league_chat_id": null,
+    "draft_status": "postdraft",
+    "num_teams": "12",
+    "edit_key": "2015-12-29",
+    "weekly_deadline": "intraday",
+    "league_update_timestamp": "1411980235",
+    "scoring_type": "head",
+    "league_type": "private",
+    "renew": "308_58713",
+    "renewed": "346_82326",
+    "short_invitation_url": "https://yho.com/mlb?l=63623",
+    "is_pro_league": "0",
+    "is_cash_league": "0",
+    "current_week": "25",
+    "start_week": "1",
+    "start_date": "2014-03-22",
+    "end_week": "25",
+    "end_date": "2014-09-28",
+    "is_finished": "1",
+    "game_code": "mlb",
+    "season": "2014",
+    "draft_results": {
+     "count": "276",
+     "draft_result": [
+       {
+        "pick": "5",
+        "round": "1",
+        "cost": "44",
+        "team_key": "328.l.63623.t.5",
+        "player_key": "328.p.8180"
+       },
+      {
+       "pick": "1",
+       "round": "1",
+       "cost": "59",
+       "team_key": "328.l.63623.t.3",
+       "player_key": "328.p.7163"
+      },
+      {
+       "pick": "2",
+       "round": "1",
+       "cost": "18",
+       "team_key": "328.l.63623.t.1",
+       "player_key": "328.p.7066"
+      },
+      {
+       "pick": "3",
+       "round": "1",
+       "cost": "9",
+       "team_key": "328.l.63623.t.11",
+       "player_key": "328.p.8616"
+      },
+      {
+       "pick": "4",
+       "round": "1",
+       "cost": "19",
+       "team_key": "328.l.63623.t.1",
+       "player_key": "328.p.7495"
+      },
+      {
+       "pick": "6",
+       "round": "1",
+       "cost": "32",
+       "team_key": "328.l.63623.t.9",
+       "player_key": "328.p.7290"
+      }]
+    }
+  }
+}
+}
+}

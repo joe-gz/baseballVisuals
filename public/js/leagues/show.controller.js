@@ -7,17 +7,19 @@
     "LeagueFactory",
     "DraftFactory",
     "$stateParams",
+    "$scope",
     LeagueShowControllerFunction
   ]);
 
-  function LeagueShowControllerFunction(LeagueFactory, DraftFactory, $stateParams,scope){
+  function LeagueShowControllerFunction(LeagueFactory, DraftFactory, $stateParams,$scope){
     var self = this;
+    $scope.dataHasLoaded = false;
     // Get initial league data
     this.league = LeagueFactory.get({league_id: $stateParams.id});
     // Creates empty array to add player information
     this.playerList = [];
     var playerArray = this.playerList;
-    this.playerPrice = [1,2,3,4];
+    this.playerPrice = [];
     var playerAmount = this.playerPrice;
 
     // Pull out specific query data for league
@@ -44,6 +46,7 @@
               playerArray[j].position = playerData.query.results.player.eligible_positions.position;
             }
           }
+          $scope.dataHasLoaded = true;
         });
       }
       console.log(playerArray);

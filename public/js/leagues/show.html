@@ -1,8 +1,8 @@
 <h2>{{LeagueShowViewModel.league.query.results.league.name}}</h2>
 
 <div>
-    {{LeagueShowViewModel.playerPrice}}
-    <bars-chart chart-data="LeagueShowViewModel.playerPrice"></bars-chart>
+    Player Draft Prices
+    <bars-chart chart-data="LeagueShowViewModel.playerPrice" ng-if="dataHasLoaded"></bars-chart>
 </div>
 
 <div data-ng-repeat="listed in LeagueShowViewModel.playerList">

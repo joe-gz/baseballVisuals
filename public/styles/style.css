@@ -1,6 +1,7 @@
 .chart {
     background: #eee;
     padding: 3px;
+    width: 50%;
 }
 
 .chart div {

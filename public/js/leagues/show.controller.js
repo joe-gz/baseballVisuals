@@ -17,7 +17,7 @@
     // Creates empty array to add player information
     this.playerList = [];
     var playerArray = this.playerList;
-    this.playerPrice = [];
+    this.playerPrice = [1,2,3,4];
     var playerAmount = this.playerPrice;
 
     // Pull out specific query data for league

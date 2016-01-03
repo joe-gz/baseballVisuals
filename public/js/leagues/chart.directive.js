@@ -31,12 +31,14 @@
         //to our original directive markup bars-chart
         //we add a div with out chart stling and bind each
         //data entry to the chart
+
         chart.append("div").attr("class", "chart")
         .selectAll('div')
         .data(scope.data).enter().append("div")
+        .attr("class", "bar")
         .transition().ease("elastic")
         .style("width", function(d) { return d.cost + "%"; })
-        .text(function(d) { return d.cost; });
+        .text(function(d) { return d.playerName +" $"+ d.cost; });
         //a little of magic: setting it's width based
         //on the data value (d)
         //and text all with a smooth transition

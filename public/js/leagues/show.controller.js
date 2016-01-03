@@ -19,8 +19,8 @@
     // Creates empty array to add player information
     this.playerList = [];
     var playerArray = this.playerList;
-    this.playerPrice = [];
-    var playerAmount = this.playerPrice;
+    // this.playerPrice = [];
+    // var playerAmount = this.playerPrice;
 
     // Pull out specific query data for league
     this.league.$promise.then(function(data) {
@@ -33,7 +33,7 @@
         // Will change back to regular player key when conencted to actual API
         var playerID = playerKey.slice(-4)
         var playerCost = data.query.results.league.draft_results.draft_result[i].cost
-        playerAmount.push(parseInt(playerCost))
+        // playerAmount.push(parseInt(playerCost))
         var playerRound = data.query.results.league.draft_results.draft_result[i].round
         playerArray.push({'count':i,'id':playerKey,'shortID':playerID,'cost':playerCost,'round':playerRound})
 
@@ -50,7 +50,7 @@
         });
       }
       console.log(playerArray);
-      console.log(playerAmount);
+      // console.log(playerAmount);
     });
   }
 }());

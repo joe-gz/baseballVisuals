@@ -35,8 +35,8 @@
         .selectAll('div')
         .data(scope.data).enter().append("div")
         .transition().ease("elastic")
-        .style("width", function(d) { return d + "%"; })
-        .text(function(d) { return d; });
+        .style("width", function(d) { return d.cost + "%"; })
+        .text(function(d) { return d.cost; });
         //a little of magic: setting it's width based
         //on the data value (d)
         //and text all with a smooth transition

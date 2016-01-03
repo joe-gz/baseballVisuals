@@ -40,13 +40,14 @@
         // Player names and stats are not included in initial data pull, so we need to add that into each object throguh a second AJAX call
         self.players = DraftFactory.get({playerKey: playerID}, function(playerData) {
           for (var j = 0; j < playerArray.length; j++){
+            $scope.dataHasLoaded = false;
             if (playerArray[j].id === playerData.query.results.player.player_key){
               playerArray[j].playerName = playerData.query.results.player.name.full;
               playerArray[j].photo = playerData.query.results.player.headshot.url;
               playerArray[j].position = playerData.query.results.player.eligible_positions.position;
+              $scope.dataHasLoaded = true;
             }
           }
-          $scope.dataHasLoaded = true;
         });
       }
       console.log(playerArray);

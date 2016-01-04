@@ -1,16 +1,14 @@
 "use strict";
+angular.module('leagues')
+  .factory('DraftFactory', function(
+    $http
+  ){
 
-(function(){
-  angular
-  .module("leagues")
-  .factory("DraftFactory", [
-    "$resource",
-    DraftFactoryFunction
-  ]);
+  var service = {};
 
-  function DraftFactoryFunction($resource,playerKey){
-    return $resource("/jsonData/:playerKey.json", {}, {
-      query: {method:'GET', params:{playerKey:'playerKey'}, isArray:true}
-    });
-  }
-}());
+  service.getPlayerData = function(playerKey){
+    return $http.get('/jsonData/' + playerKey + '.json');
+  };
+
+  return service;
+});

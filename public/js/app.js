@@ -1,12 +1,3 @@
-// $(document).ready(function(){
-//   submitComment();
-//   Comment.fetch().then(function(comments){
-//     Comment.all.forEach(function(comment){
-//       var view = new CommentView(comment)
-//     })
-//   })
-// });
-
 "use strict";
 
 (function(){

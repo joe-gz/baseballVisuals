@@ -2,10 +2,13 @@
 var express = require('express')
 // loads mongoose dependency
 var mongoose = require('mongoose')
+var passport     = require('passport');
 // loads dependency for middleware for paramters
 var bodyParser = require('body-parser')
+var session = require('express-session');
 // loads dependency that allows put and delete where not supported in html
 var methodOverride = require('method-override')
+var request = require('request')
 // loads module containing all authors contrller actions. not defined yet...
 var commentsController = require("./controllers/commentsController")
 // connect mongoose interfaces to reminders mongo db
@@ -19,6 +22,12 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 // connects assets like stylesheets
 app.use(express.static(__dirname + '/public'))
+
+app.use(session({ secret: 'FS-VISUALS',
+resave: true,
+saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // define controller/route
 app.use("/", commentsController)

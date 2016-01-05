@@ -24,3 +24,7 @@
 .bar:hover {
   background-color: turquoise;
 }
+
+#yahoo-login {
+  width: 25%;
+}

@@ -1,13 +1,15 @@
 .chart {
   background: #eee;
   padding: 3px;
-  width: 100%; }
+  width: 100%;
+}
 
 .chart div {
   width: 0;
   transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out; }
+  -webkit-transition: all 1s ease-out;
+}
 
 .chart div {
   font: 10px sans-serif;
@@ -16,100 +18,92 @@
   padding: 5px;
   margin: 5px;
   color: white;
-  box-shadow: 2px 2px 2px #666; }
+  box-shadow: 2px 2px 2px #666;
+}
 
 .bar:hover {
-  background-color: turquoise; }
+  background-color: turquoise;
+}
 
 #yahoo-login {
-  width: 25%; }
+  width: 25%;
+}
 
 .row {
-  border: 2px solid black; }
+  border: 2px solid black;
+}
 
 .column {
   border: 2px solid tomato;
   /*display: inline-block;*/
   float: left;
   border-radius: 20px;
-  text-align: center; }
+  text-align: center;
+}
 
 /*.row {
 overflow:auto;
 }*/
+
 /*effective clearfix for all browsers*/
 /********************/
 .row:before, .row:after {
   content: "";
-  display: table; }
+  display: table;
+}
 
 .row:after {
-  clear: both; }
-
+  clear: both;
+}
 /*********************/
-.row, .column {
-  box-sizing: border-box; }
 
-.column-1 {
-  width: 8.333%; }
+.row,.column {
+  box-sizing: border-box;
+}
 
-.column-2 {
-  width: 16.66%; }
-
-.column-3 {
-  width: 25%; }
-
-.column-4 {
-  width: 33.33%; }
-
-.column-5 {
-  width: 41.66%; }
-
-.column-6 {
-  width: 50%; }
-
-.column-7 {
-  width: 58.33%; }
-
-.column-8 {
-  width: 66.66%; }
-
-.column-9 {
-  width: 75%; }
-
-.column-10 {
-  width: 83.33%; }
-
-.column-11 {
-  width: 91.66%; }
-
-.column-12 {
-  width: 100%; }
+.column-1 { width: 8.333%; }
+.column-2 { width: 16.66%; }
+.column-3 { width: 25%; }
+.column-4 { width: 33.33%; }
+.column-5 { width: 41.66%; }
+.column-6 { width: 50%; }
+.column-7 { width: 58.33%; }
+.column-8 { width: 66.66%; }
+.column-9 { width: 75%; }
+.column-10 { width: 83.33%; }
+.column-11 { width: 91.66%; }
+.column-12 { width: 100%; }
 
 .middle > .column {
   height: 400px;
-  line-height: 400px; }
+  line-height: 400px;
+}
 
 .header > .column,
 .footer > .column {
-  padding: 25px; }
+  padding: 25px;
+}
 
 .header ul {
-  margin: auto; }
+  margin: auto;
+}
 
 .header li {
   display: inline-block;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 .module {
   /* Let's add a background color to our modules so they're clearly visible.*/
   background: lightblue;
+
   /* Now let's give our modules a left and right margin of 10px */
-  margin: 0 10px; }
+  margin: 0 10px;
+}
 
 @media only screen and (max-width: 480px) {
-  .column {
+    .column {
     margin: 1% 0 1% 0%;
-    width: 100%; } }
-
-/*# sourceMappingURL=style.css.map */
+    width: 100%;
+  }
+}

@@ -1,14 +1,20 @@
 <h2>{{LeagueShowViewModel.league.query.results.league.name}}</h2>
 
 <div>
-    Player Draft Prices
-    <bars-chart chart-data="LeagueShowViewModel.playerList" ng-if="dataHasLoaded"></bars-chart>
+  Player Draft Prices
+  <bars-chart chart-data="LeagueShowViewModel.playerList" ng-if="dataHasLoaded"></bars-chart>
 </div>
 
-<div data-ng-repeat="listed in LeagueShowViewModel.playerList">
-  <img data-ng-src="{{listed.photo}}" alt="" />
-  <p>Name: <a data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
-  <p>Positions: {{listed.position}}</p>
-  <p>Draft Round: {{listed.round}}</p>
-  <p>Cost: {{listed.cost}}</p>
+<div>
+  Select Round
+</div>
+
+<div class = "row">
+  <div class = "column column-4" data-ng-repeat="listed in LeagueShowViewModel.playerList">
+    <img data-ng-src="{{listed.photo}}" alt="" />
+    <p>Name: <a data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
+    <p>Positions: {{listed.position}}</p>
+    <p>Draft Round: {{listed.round}}</p>
+    <p>Cost: {{listed.cost}}</p>
+  </div>
 </div>

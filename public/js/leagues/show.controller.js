@@ -29,13 +29,14 @@
       for (var i = 0; i < length; i++){
         var player = data.query.results.league.draft_results.draft_result[i];
         var playerKey = data.query.results.league.draft_results.draft_result[i].player_key
+        var teamId = data.query.results.league.draft_results.draft_result[i].team_key
         // Shortens player ID only for example. Allows for easy access to static JSON files
         // Will change back to regular player key when conencted to actual API
         var playerID = playerKey.slice(-4)
         var playerCost = data.query.results.league.draft_results.draft_result[i].cost
         // playerAmount.push(parseInt(playerCost))
         var playerRound = data.query.results.league.draft_results.draft_result[i].round
-        playerArray.push({'count':i,'id':playerKey,'shortID':playerID,'cost':playerCost,'round':playerRound})
+        playerArray.push({'count':i,'id':playerKey,'shortID':playerID,'cost':playerCost,'round':playerRound,'teamKey':teamId})
 
         // Player names and stats are not included in initial data pull, so we need to add that into each object throguh a second AJAX call
         self.players = DraftFactory.get({playerKey: playerID}, function(playerData) {

@@ -1,29 +1,28 @@
-<div ng-controller="LeagueShowController">
-  <form name="roundDropdown">
-    <label for="round"> Round: </label>
-    <select name="round" id="round" ng-model="LeagueShowViewModel.playerList"  ng-if="dataHasLoaded">
-      <option ng-repeat="listed in LeagueShowViewModel.playerList" value="{{listed.round}}">{{listed.round}}</option>
-    </select>
-  </form>
-  <tt>round = {{listed.round}}</tt>
-</div>
+<div class = "row" ng-controller="LeagueShowController">
+  <div class = "column column-4">
+    <form name="roundDropdown">
+      <label for="round"> Round: </label>
+      <select name="round" id="round" ng-model="filterItem.resultsArray" ng-options="draft.round for draft in resultsArray" ng-if="contentDone">
+      </select>
+    </form>
+    <tt>round = {{draft.round}}</tt>
+  </div>
 
-<div ng-controller="LeagueShowController">
-  <form name="teamDropdown">
-    <label for="teamKey"> teamKey: </label>
-    <select name="teamKey" id="teamKey" ng-model="LeagueShowViewModel.playerList"  ng-if="dataHasLoaded">
-      <option ng-repeat="listed in LeagueShowViewModel.playerList" value="{{listed.teamKey}}">{{listed.teamKey}}</option>
-    </select>
-  </form>
-  <tt>teamKey = {{listed.teamKey}}</tt>
-</div>
+  <div class = "column column-4">
+    <form name="teamDropdown">
+      <label for="teamKey"> teamKey: </label>
+      <select name="teamKey" id="teamKey" ng-model="filterItem.resultsArray" ng-options="draft.teamKey for draft in resultsArray" ng-if="contentDone">
+      </select>
+    </form>
+    <tt>teamKey = {{draft.teamKey}}</tt>
+  </div>
 
-<div ng-controller="LeagueShowController">
-  <form name="positionDropdown">
-    <label for="position"> Position: </label>
-    <select name="position" id="position" ng-model="LeagueShowViewModel.playerList"  ng-if="dataHasLoaded">
-      <option ng-repeat="listed in LeagueShowViewModel.playerList" value="{{listed.position}}">{{listed.position}}</option>
-    </select>
-  </form>
-  <tt>position = {{listed.position}}</tt>
+  <div class = "column column-4">
+    <form name="positionDropdown">
+      <label for="position"> Position: </label>
+      <select name="position" id="position" ng-model="filterItem.resultsArray" ng-options="draft.position for draft in resultsArray" ng-if="contentDone">
+      </select>
+    </form>
+    <tt>position = {{draft.position}}</tt>
+  </div>
 </div>

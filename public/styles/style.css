@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0px; }
+
 .chart {
   background: #eee;
   padding: 3px;

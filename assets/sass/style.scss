@@ -6,38 +6,66 @@ body {
   margin: 0px;
 }
 
-.chart {
-  background: #fff;
-  // padding: 3px;
-  width: 100%;
-}
-
+// .chart {
+//   background: #eee;
+//   // padding: 3px;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+//
+// // rect {
+// //   width: 0;
+// //   transition: all 1s ease-out;
+// //   -moz-transition: all 1s ease-out;
+// //   -webkit-transition: all 1s ease-out;
+// // }
+//
 // rect {
-//   width: 0;
 //   transition: all 1s ease-out;
 //   -moz-transition: all 1s ease-out;
 //   -webkit-transition: all 1s ease-out;
+//   // font: 10px sans-serif;
+//   fill: steelblue;
+//   text-align: right;
+//   // padding: 5px;
+//   // margin: 5px;
+//   color: white;
+//   box-shadow: 2px 2px 2px #666;
+// }
+//
+// rect:hover {
+//   fill: turquoise;
+// }
+//
+// .x-axis,.y-axis{
+//   font-size: .8em;
 // }
 
-rect {
+.chart {
+  background: #eee;
+  padding: 3px;
+  width: 100%;
+}
+
+.chart div {
+  width: 0;
   transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
   font: 10px sans-serif;
-  fill: steelblue;
+  background-color: steelblue;
   text-align: right;
-  // padding: 5px;
-  // margin: 5px;
+  padding: 5px;
+  margin: 5px;
   color: white;
   box-shadow: 2px 2px 2px #666;
 }
 
-rect:hover {
-  fill: turquoise;
-}
-
-.x-axis{
-  font-size: .8em;
+.bar:hover {
+  background-color: turquoise;
 }
 
 #yahoo-login {

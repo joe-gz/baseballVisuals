@@ -5,27 +5,24 @@ body {
   margin: 0px; }
 
 .chart {
-  background: #eee;
-  padding: 3px;
+  background: #fff;
   width: 100%; }
 
-.chart div {
-  width: 0;
+rect {
   transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out; }
-
-.chart div {
+  -webkit-transition: all 1s ease-out;
   font: 10px sans-serif;
-  background-color: steelblue;
+  fill: steelblue;
   text-align: right;
-  padding: 5px;
-  margin: 5px;
   color: white;
   box-shadow: 2px 2px 2px #666; }
 
-.bar:hover {
-  background-color: turquoise; }
+rect:hover {
+  fill: turquoise; }
+
+.x-axis {
+  font-size: .8em; }
 
 #yahoo-login {
   width: 25%; }
@@ -39,11 +36,6 @@ body {
   border-radius: 20px;
   text-align: center; }
 
-/*.row {
-overflow:auto;
-}*/
-/*effective clearfix for all browsers*/
-/********************/
 .row:before, .row:after {
   content: "";
   display: table; }
@@ -51,7 +43,6 @@ overflow:auto;
 .row:after {
   clear: both; }
 
-/*********************/
 .row, .column {
   box-sizing: border-box; }
 
@@ -105,12 +96,6 @@ overflow:auto;
 .header li {
   display: inline-block;
   list-style-type: none; }
-
-.module {
-  /* Let's add a background color to our modules so they're clearly visible.*/
-  background: lightblue;
-  /* Now let's give our modules a left and right margin of 10px */
-  margin: 0 10px; }
 
 @media only screen and (max-width: 480px) {
   .column {

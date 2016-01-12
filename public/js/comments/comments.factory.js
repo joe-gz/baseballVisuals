@@ -9,7 +9,7 @@
   ]);
 
   function CommentFactoryFunction($resource){
-    return $resource("/comments/:id", {}, {
+    return $resource("/leagues/:id", {}, {
       update: {method: "PUT"}
     });
   }

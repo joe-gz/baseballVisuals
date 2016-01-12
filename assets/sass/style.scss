@@ -7,30 +7,37 @@ body {
 }
 
 .chart {
-  background: #eee;
-  padding: 3px;
+  background: #fff;
+  // padding: 3px;
   width: 100%;
 }
 
-.chart div {
-  width: 0;
+// rect {
+//   width: 0;
+//   transition: all 1s ease-out;
+//   -moz-transition: all 1s ease-out;
+//   -webkit-transition: all 1s ease-out;
+// }
+
+rect {
   transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
-}
-
-.chart div {
   font: 10px sans-serif;
-  background-color: steelblue;
+  fill: steelblue;
   text-align: right;
-  padding: 5px;
-  margin: 5px;
+  // padding: 5px;
+  // margin: 5px;
   color: white;
   box-shadow: 2px 2px 2px #666;
 }
 
-.bar:hover {
-  background-color: turquoise;
+rect:hover {
+  fill: turquoise;
+}
+
+.x-axis{
+  font-size: .8em;
 }
 
 #yahoo-login {
@@ -49,12 +56,6 @@ body {
   text-align: center;
 }
 
-/*.row {
-overflow:auto;
-}*/
-
-/*effective clearfix for all browsers*/
-/********************/
 .row:before, .row:after {
   content: "";
   display: table;
@@ -63,7 +64,6 @@ overflow:auto;
 .row:after {
   clear: both;
 }
-/*********************/
 
 .row,.column {
   box-sizing: border-box;
@@ -101,16 +101,8 @@ overflow:auto;
   list-style-type: none;
 }
 
-.module {
-  /* Let's add a background color to our modules so they're clearly visible.*/
-  background: lightblue;
-
-  /* Now let's give our modules a left and right margin of 10px */
-  margin: 0 10px;
-}
-
 @media only screen and (max-width: 480px) {
-    .column {
+  .column {
     margin: 1% 0 1% 0%;
     width: 100%;
   }

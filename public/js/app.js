@@ -16,19 +16,19 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("commentIndex", {
-      url: "/",
+      url: "/leagues/:id/comments",
       templateUrl: "js/comments/index.html",
       controller: "CommentIndexController",
       controllerAs: "CommentIndexViewModel"
     })
     .state("commentShow", {
-      url: "/comments/:id",
+      url: "/leagues/:id/comments",
       templateUrl: "js/comments/show.html",
       controller: "CommentShowController",
       controllerAs: "CommentShowViewModel"
     })
     .state("leagueIndex", {
-      url: "/leagues",
+      url: "/",
       templateUrl: "js/leagues/index.html",
       controller: "LeagueIndexController",
       controllerAs: "LeagueIndexViewModel"

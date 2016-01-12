@@ -2,27 +2,27 @@
   <div class = "column column-4">
     <form name="roundDropdown">
       <label for="round"> Round: </label>
-      <select name="round" id="round" ng-model="filterItem.resultsArray" ng-options="draft.round for draft in resultsArray" ng-if="contentDone">
+      <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
       </select>
     </form>
-    <tt>round = {{draft.round}}</tt>
+    <tt>round = {{filterRound.result.round}}</tt>
   </div>
 
-  <div class = "column column-4">
+  <!-- <div class = "column column-4">
     <form name="teamDropdown">
       <label for="teamKey"> teamKey: </label>
-      <select name="teamKey" id="teamKey" ng-model="filterItem.resultsArray" ng-options="draft.teamKey for draft in resultsArray" ng-if="contentDone">
+      <select name="teamKey" id="teamKey" ng-model="filterItem.store" ng-options="draft.teamKey for draft in resultsArray" ng-if="contentDone">
       </select>
     </form>
-    <tt>teamKey = {{draft.teamKey}}</tt>
+    <tt>teamKey = {{filterItem.store.teamKey}}</tt>
   </div>
 
   <div class = "column column-4">
     <form name="positionDropdown">
       <label for="position"> Position: </label>
-      <select name="position" id="position" ng-model="filterItem.resultsArray" ng-options="draft.position for draft in resultsArray" ng-if="contentDone">
+      <select name="position" id="position" ng-model="filterItem.store" ng-options="draft.position for draft in resultsArray" ng-if="contentDone">
       </select>
     </form>
-    <tt>position = {{draft.position}}</tt>
-  </div>
+    <tt>position = {{filterItem.store.position}}</tt>
+  </div> -->
 </div>

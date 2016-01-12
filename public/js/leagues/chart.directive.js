@@ -21,9 +21,19 @@
       replace: false,
       //our data source would be an array
       //passed thru chart-data attribute
-      scope: {data: '=chartData'},
+      scope: {data: '=chartData', filter: '=filterRound'},
       link: function (scope, element, attrs) {
         console.log(scope.data);
+
+        scope.masterData = scope.data;
+
+        scope.$watch('filter', function(newValue, oldValue) {
+
+          scope.data = [];
+
+          //if (newValue.round === scope.masterData.query.playersBalls.round)
+            console.log('NEW VALUE: ' + newValue.round);
+        }, true);
         //in D3, any selection[0] contains the group
         //selection[0][0] is the DOM node
         //but we won't need that this time
@@ -32,16 +42,20 @@
         //we add a div with out chart stling and bind each
         //data entry to the chart
 
-        chart.append("div").attr("class", "chart")
-        .selectAll('div')
-        .data(scope.data).enter().append("div")
-        .attr("class", "bar")
-        .transition().ease("elastic")
-        .style("width", function(d) { return d.cost + "%"; })
-        .text(function(d) { return d.playerName +" $"+ d.cost; });
-        //a little of magic: setting it's width based
-        //on the data value (d)
-        //and text all with a smooth transition
+        scope.loadChart = function(){
+          chart.append("div").attr("class", "chart")
+          .selectAll('div')
+          .data(scope.data).enter().append("div")
+          .attr("class", "bar")
+          .transition().ease("elastic")
+          .style("width", function(d) { return d.cost + "%"; })
+          .text(function(d) { return d.playerName +" $"+ d.cost; });
+          //a little of magic: setting it's width based
+          //on the data value (d)
+          //and text all with a smooth transition
+        };
+
+        scope.loadChart();
       }
     };
     return directiveDefinitionObject;

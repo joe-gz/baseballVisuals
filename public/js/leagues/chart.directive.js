@@ -30,6 +30,7 @@
         scope.$watch('filter', function(newValue, oldValue) {
 
           $('.chart').remove();
+          $('.bubble').remove();
           scope.data = [];
 
           if (newValue.round === 'Show All') {
@@ -71,84 +72,57 @@
           //and text all with a smooth transition
 
           // *******************************************************
-          // var margin = {
-          //   top: 10,
-          //   right: 10,
-          //   bottom: 70,
-          //   left: 70
-          // },w = 600,
-          // h = 350;
-          //
-          // var xScale = d3.scale.ordinal()
-          // .domain(d3.range(scope.data.length))
-          // .rangeRoundBands([0, w], 0.05);
-          //
-          // var yScale = d3.scale.linear()
-          // .domain([0, d3.max(scope.data, function (d) {
-          //   return (d.cost);
-          // })])
-          // .range([h, 0]);
-          //
-          // var xAxis = d3.svg.axis()
-          // .scale(xScale)
-          // .tickFormat(function (d) {
-          //   return scope.data[d].playerName;
-          // })
-          //
-          // var yAxis = d3.svg.axis()
-          // .scale(yScale)
-          // .orient("left")
-          // .ticks(10);
-          //
-          // //SVG element
-          // var svg = d3.select(element[0])
-          // .append("svg")
-          // .attr("class", "chart")
-          // .attr("width", w + margin.left + margin.right)
-          // .attr("height", h + margin.top + margin.bottom)
-          // .append("g")
-          // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-          //
-          // // Graph Bars
-          // var sets = svg.selectAll(".set")
-          // .data(scope.data)
-          // .enter()
-          // .append("g")
-          // .attr("class", "set")
-          // .attr("transform", function (d, i) {
-          //   return "translate(" + xScale(i) + ",0)";
-          // });
-          //
-          // sets.append("rect")
-          // .attr("class", "cost")
-          // .transition().ease("elastic")
-          // .attr("width", xScale.rangeBand())
-          // .attr("y", function (d) {
-          //   return yScale(d.cost);
-          // })
-          // .attr("x", xScale.rangeBand()/100)
-          // .attr("height", function (d) {
-          //   return h - yScale(d.cost);
-          // });
-          //
-          // // xAxis
-          // svg.append("g") // Add the X Axis
-          // .attr("class", "x-axis")
-          // .attr("transform", "translate(0," + (h) + ")")
-          // .call(xAxis)
-          // .selectAll("text")
-          // .attr("dx", "3em")
-          // .attr("dy", "1em")
-          // .style("text-anchor", "end")
-          // .attr("transform", function (d) {
-          //   return "rotate(0)";
-          // });
-          // // yAxis
-          // svg.append("g")
-          // .attr("class", "y-axis")
-          // .attr("transform", "translate(0 ,0)")
-          // .call(yAxis);
 
+          var diameter = 500, //max size of the bubbles
+          color    = d3.scale.category20b(); //color category
+
+          var bubble = d3.layout.pack()
+          .sort(null)
+          .size([diameter, diameter])
+          .padding(1.5);
+
+          var svg = chart.append("svg")
+          .attr("width", diameter)
+          .attr("height", diameter)
+          .attr("class", "bubble");
+
+          function render(data){
+
+            //convert numerical values from strings to numbers
+            data = data.map(function(d){ d.value = +Number(d.cost); return d; });
+            console.log(data);
+
+            //bubbles needs very specific format, convert data to this.
+            var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
+
+            //setup the chart
+            var bubbles = svg.append("g")
+            .attr("transform", "translate(0,0)")
+            .selectAll(".bubble")
+            .data(nodes)
+            .enter();
+
+            //create the bubbles
+            bubbles.append("circle")
+            .attr("r", function(d){ return d.r; })
+            .attr("cx", function(d){ return d.x; })
+            .attr("cy", function(d){ return d.y; })
+            .style("fill", function(d) { return color(d.value); });
+
+            //format the text for each bubble
+            bubbles.append("text")
+            .attr("x", function(d){ return d.x; })
+            .attr("y", function(d){ return d.y + 5; })
+            .attr("text-anchor", "middle")
+            .text(function(d){ return d.playerName; })
+            .style({
+              "fill":"white",
+              "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+              "font-size": "12px"
+            });
+          };
+
+          render(scope.data)
           // *******************************************************
 
         };

@@ -1,0 +1,98 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2016-01-13T16:21:14Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "5",
+    "execution-stop-time": "339",
+    "execution-time": "334",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.9128/stats"
+   },
+   "javascript": {
+    "execution-start-time": "2",
+    "execution-stop-time": "346",
+    "execution-time": "344",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "349",
+   "service-time": "334",
+   "build-version": "0.2.942"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.9128",
+    "player_id": "9128",
+    "name": {
+     "full": "Yoenis Céspedes",
+     "first": "Yoenis",
+     "last": "Céspedes",
+     "ascii_first": "Yoenis",
+     "ascii_last": "Cespedes"
+    },
+    "status": "NA",
+    "editorial_player_key": "mlb.p.9128",
+    "editorial_team_key": "mlb.t.21",
+    "editorial_team_full_name": "New York Mets",
+    "editorial_team_abbr": "NYM",
+    "uniform_number": "52",
+    "display_position": "CF",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/NCQcAUebdE0uh.bl5xvacw--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/9128.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/NCQcAUebdE0uh.bl5xvacw--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/9128.png",
+    "is_undroppable": "0",
+    "position_type": "B",
+    "eligible_positions": {
+     "position": [
+      "CF",
+      "OF",
+      "Util"
+     ]
+    },
+    "has_player_notes": "1",
+    "has_recent_player_notes": "1",
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "60",
+        "value": "184/633"
+       },
+       {
+        "stat_id": "7",
+        "value": "101"
+       },
+       {
+        "stat_id": "12",
+        "value": "35"
+       },
+       {
+        "stat_id": "13",
+        "value": "105"
+       },
+       {
+        "stat_id": "16",
+        "value": "7"
+       },
+       {
+        "stat_id": "3",
+        "value": ".291"
+       },
+       {
+        "stat_id": "55",
+        "value": ".870"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2016-01-13T16:15:11Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "3",
+    "execution-stop-time": "259",
+    "execution-time": "256",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.8175/stats"
+   },
+   "javascript": {
+    "execution-start-time": "0",
+    "execution-stop-time": "261",
+    "execution-time": "260",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "262",
+   "service-time": "256",
+   "build-version": "0.2.842"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.8175",
+    "player_id": "8175",
+    "name": {
+     "full": "David Price",
+     "first": "David",
+     "last": "Price",
+     "ascii_first": "David",
+     "ascii_last": "Price"
+    },
+    "editorial_player_key": "mlb.p.8175",
+    "editorial_team_key": "mlb.t.2",
+    "editorial_team_full_name": "Boston Red Sox",
+    "editorial_team_abbr": "Bos",
+    "uniform_number": "24",
+    "display_position": "SP",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/WGUFxSWNvlI5INFdl0hmQQ--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://sp.yimg.com/j/assets/ipt/8175.1.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/WGUFxSWNvlI5INFdl0hmQQ--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://sp.yimg.com/j/assets/ipt/8175.1.png",
+    "is_undroppable": "0",
+    "position_type": "P",
+    "eligible_positions": {
+     "position": [
+      "SP",
+      "P"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "50",
+        "value": "220.1"
+       },
+       {
+        "stat_id": "28",
+        "value": "18"
+       },
+       {
+        "stat_id": "32",
+        "value": "0"
+       },
+       {
+        "stat_id": "42",
+        "value": "225"
+       },
+       {
+        "stat_id": "26",
+        "value": "2.45"
+       },
+       {
+        "stat_id": "27",
+        "value": "1.08"
+       },
+       {
+        "stat_id": "56",
+        "value": "4.79"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

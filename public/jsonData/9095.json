@@ -1,0 +1,97 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2016-01-13T16:20:10Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "3",
+    "execution-stop-time": "256",
+    "execution-time": "253",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.9095/stats"
+   },
+   "javascript": {
+    "execution-start-time": "1",
+    "execution-stop-time": "258",
+    "execution-time": "256",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "259",
+   "service-time": "253",
+   "build-version": "0.2.942"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.9095",
+    "player_id": "9095",
+    "name": {
+     "full": "Yu Darvish",
+     "first": "Yu",
+     "last": "Darvish",
+     "ascii_first": "Yu",
+     "ascii_last": "Darvish"
+    },
+    "status": "DL",
+    "on_disabled_list": "1",
+    "editorial_player_key": "mlb.p.9095",
+    "editorial_team_key": "mlb.t.13",
+    "editorial_team_full_name": "Texas Rangers",
+    "editorial_team_abbr": "Tex",
+    "uniform_number": "11",
+    "display_position": "SP",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/3p5cvFGjgEVKSaANl29rhA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/9095.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/3p5cvFGjgEVKSaANl29rhA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150520/9095.png",
+    "is_undroppable": "0",
+    "position_type": "P",
+    "eligible_positions": {
+     "position": [
+      "SP",
+      "P",
+      "DL"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "50",
+        "value": "-"
+       },
+       {
+        "stat_id": "28",
+        "value": "-"
+       },
+       {
+        "stat_id": "32",
+        "value": "-"
+       },
+       {
+        "stat_id": "42",
+        "value": "-"
+       },
+       {
+        "stat_id": "26",
+        "value": "-"
+       },
+       {
+        "stat_id": "27",
+        "value": "-"
+       },
+       {
+        "stat_id": "56",
+        "value": "-"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

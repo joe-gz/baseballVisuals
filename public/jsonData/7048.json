@@ -1,0 +1,94 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2016-01-13T16:21:39Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "2",
+    "execution-stop-time": "302",
+    "execution-time": "300",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.7048/stats"
+   },
+   "javascript": {
+    "execution-start-time": "0",
+    "execution-stop-time": "303",
+    "execution-time": "303",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "304",
+   "service-time": "300",
+   "build-version": "0.2.842"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.7048",
+    "player_id": "7048",
+    "name": {
+     "full": "Adam Wainwright",
+     "first": "Adam",
+     "last": "Wainwright",
+     "ascii_first": "Adam",
+     "ascii_last": "Wainwright"
+    },
+    "editorial_player_key": "mlb.p.7048",
+    "editorial_team_key": "mlb.t.24",
+    "editorial_team_full_name": "St. Louis Cardinals",
+    "editorial_team_abbr": "StL",
+    "uniform_number": "50",
+    "display_position": "SP",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/Qcc5WZMfY5yugugeQg_eRA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/7048.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/Qcc5WZMfY5yugugeQg_eRA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150406/7048.png",
+    "is_undroppable": "0",
+    "position_type": "P",
+    "eligible_positions": {
+     "position": [
+      "SP",
+      "P"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "50",
+        "value": "28.0"
+       },
+       {
+        "stat_id": "28",
+        "value": "2"
+       },
+       {
+        "stat_id": "32",
+        "value": "0"
+       },
+       {
+        "stat_id": "42",
+        "value": "20"
+       },
+       {
+        "stat_id": "26",
+        "value": "1.61"
+       },
+       {
+        "stat_id": "27",
+        "value": "1.04"
+       },
+       {
+        "stat_id": "56",
+        "value": "5.00"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

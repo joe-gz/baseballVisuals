@@ -1,0 +1,94 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2016-01-13T16:15:34Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": {
+    "execution-start-time": "3",
+    "execution-stop-time": "207",
+    "execution-time": "204",
+    "content": "http://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=346.l.82326/players;player_keys=346.p.8590/stats"
+   },
+   "javascript": {
+    "execution-start-time": "0",
+    "execution-stop-time": "209",
+    "execution-time": "208",
+    "instructions-used": "252",
+    "table-name": "fantasysports.players.stats"
+   },
+   "user-time": "210",
+   "service-time": "204",
+   "build-version": "0.2.842"
+  },
+  "results": {
+   "player": {
+    "player_key": "346.p.8590",
+    "player_id": "8590",
+    "name": {
+     "full": "Madison Bumgarner",
+     "first": "Madison",
+     "last": "Bumgarner",
+     "ascii_first": "Madison",
+     "ascii_last": "Bumgarner"
+    },
+    "editorial_player_key": "mlb.p.8590",
+    "editorial_team_key": "mlb.t.26",
+    "editorial_team_full_name": "San Francisco Giants",
+    "editorial_team_abbr": "SF",
+    "uniform_number": "40",
+    "display_position": "SP",
+    "headshot": {
+     "url": "http://l.yimg.com/iu/api/res/1.2/GgwCgFQ6Vv81iRFlJ6ALNA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150527/8590.png",
+     "size": "small"
+    },
+    "image_url": "http://l.yimg.com/iu/api/res/1.2/GgwCgFQ6Vv81iRFlJ6ALNA--/YXBwaWQ9c2hhcmVkO2NoPTIzMzY7Y3I9MTtjdz0xNzkwO2R4PTg1NztkeT0wO2ZpPXVsY3JvcDtoPTYwO3E9MTAwO3c9NDY-/https://s.yimg.com/xe/i/us/sp/v/mlb_cutout/players_l/20150527/8590.png",
+    "is_undroppable": "0",
+    "position_type": "P",
+    "eligible_positions": {
+     "position": [
+      "SP",
+      "P"
+     ]
+    },
+    "player_stats": {
+     "coverage_type": "season",
+     "season": "2015",
+     "stats": {
+      "stat": [
+       {
+        "stat_id": "50",
+        "value": "218.1"
+       },
+       {
+        "stat_id": "28",
+        "value": "18"
+       },
+       {
+        "stat_id": "32",
+        "value": "0"
+       },
+       {
+        "stat_id": "42",
+        "value": "234"
+       },
+       {
+        "stat_id": "26",
+        "value": "2.93"
+       },
+       {
+        "stat_id": "27",
+        "value": "1.01"
+       },
+       {
+        "stat_id": "56",
+        "value": "6.00"
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -59,13 +59,16 @@
 
 
         scope.loadChart = function(){
-
-          chart.append("div").attr("class", "chart")
+          color    = d3.scale.category10();
+          var bar = chart.append("div").attr("class", "chart")
           .selectAll('div')
-          .data(scope.data).enter().append("div")
+          .data(scope.data).enter();
+
+          bar.append("div")
           .attr("class", "bar")
           .transition().ease("elastic")
           .style("width", function(d) { return d.cost + "%"; })
+          .style("background-color", function(d) { return color(d.cost); })
           .text(function(d) { return d.playerName +" $"+ d.cost; });
           //a little of magic: setting it's width based
           //on the data value (d)
@@ -74,11 +77,11 @@
           // *******************************************************
 
           var diameter = 500, //max size of the bubbles
-          color    = d3.scale.category20b(); //color category
+          color    = d3.scale.category10(); //color category
 
           var bubble = d3.layout.pack()
           .sort(null)
-          .size([diameter, diameter])
+          .size([diameter+350, diameter])
           .padding(1.5);
 
           var svg = chart.append("svg")
@@ -102,19 +105,31 @@
             .data(nodes)
             .enter();
 
+            // Show text (on hover effect)
+            var tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "popup")
+            .style("position", "absolute")
+            .style("color", "red")
+            .style("z-index", "10")
+            .style("visibility", "hidden")
+
             //create the bubbles
             bubbles.append("circle")
+            .attr("class", "circle")
             .attr("r", function(d){ return d.r; })
             .attr("cx", function(d){ return d.x; })
             .attr("cy", function(d){ return d.y; })
-            .style("fill", function(d) { return color(d.value); });
-
+            .style("fill", function(d) { return color(d.value); })
+            // .on("mouseover", function(d) {d3.select(this).style("fill", "turquoise");})
+            .on("mouseover", function(d){tooltip.style("visibility", "visible").text(d.playerName+", $"+d.cost);})
+            .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+            .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
             //format the text for each bubble
             bubbles.append("text")
             .attr("x", function(d){ return d.x; })
             .attr("y", function(d){ return d.y + 5; })
             .attr("text-anchor", "middle")
-            .text(function(d){ return d.playerName; })
             .style({
               "fill":"white",
               "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",

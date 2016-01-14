@@ -4,10 +4,10 @@
 </div> -->
 <!-- <charter></charter> -->
 
-<div data-ng-repeat="listed in playerInfo">
-  <img data-ng-src="{{listed.query.results.player.headshot.url}}" alt="" />
+<div class = "playerDiv" data-ng-repeat="listed in playerInfo">
+  <img class = "player-show-image" data-ng-src="{{listed.query.results.player.headshot.url}}" alt="" />
   <p>Name: {{listed.query.results.player.name.full}}</p>
-  <p>Positions: {{listed.query.results.player.eligible_positions.position}}</p>
+  <p>Positions: {{listed.query.results.player.display_position}}</p>
   <p>Stats for {{listed.query.results.player.player_stats.season}}:</p>
   <div data-ng-repeat="stat in statistics[0]">
     <div>{{stat.statName}}: {{stat.value}}</div>

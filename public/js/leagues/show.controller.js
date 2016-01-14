@@ -11,6 +11,7 @@ angular.module('leagues').controller('LeagueShowController', function(
     $scope.resultsArray = [];
     $scope.commentsArray = [];
     $scope.newComment = new CommentFactory();
+    $scope.commentFunctions = CommentFactory.get({id: $stateParams.id});
 
     $scope.roundArray = {
       rounds: [

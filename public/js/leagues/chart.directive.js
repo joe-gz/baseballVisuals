@@ -26,6 +26,7 @@
 
         scope.masterData = scope.data;
 
+        scope.$watch('filterPosition', filterWatch, true);
         scope.$watch('filter', filterWatch, true);
 
         function filterWatch(newValue, oldValue) {
@@ -34,7 +35,6 @@
           $('.chart').remove();
           $('.bubble').remove();
           scope.data = [];
-
           if (newValue.round === 'Show All') {
             console.log('Make everything show!');
             scope.data = scope.masterData
@@ -46,32 +46,20 @@
               }
             }
           }
+          if (newValue.position === 'Show All') {
+            console.log('Make everything show!');
+            scope.data = scope.masterData
+          } else {
+            for (var i = 0; i < scope.masterData.length; i++){
+              if (scope.masterData[i].position === newValue.position) {
+                console.log('SHOW JUST '+ scope.masterData[i].position);
+                scope.data.push(scope.masterData[i])
+              }
+            }
+          }
 
           scope.loadChart();
-          console.log('NEW VALUE: ' + newValue.round);
         }
-
-        // scope.$watch('filterPosition', function(newValue, oldValue) {
-        //
-        //   $('.chart').remove();
-        //   $('.bubble').remove();
-        //   scope.data = [];
-        //
-        //   if (newValue.position === 'Show All') {
-        //     console.log('Make everything show!');
-        //     scope.data = scope.masterData
-        //   } else {
-        //     for (var i = 0; i < scope.masterData.length; i++){
-        //       if (Number(scope.masterData[i].position) === newValue.position) {
-        //         console.log('SHOW JUST '+ scope.masterData[i].position);
-        //         scope.data.push(scope.masterData[i])
-        //       }
-        //     }
-        //   }
-        //
-        //   scope.loadChart();
-        //   console.log('NEW VALUE: ' + newValue.position);
-        // }, true);
 
         //in D3, any selection[0] contains the group
         //selection[0][0] is the DOM node
@@ -85,17 +73,16 @@
         scope.loadChart = function(){
           // *******************************************************
 
-          var diameter = 500, //max size of the bubbles
+          var diameter = 450, //max size of the bubbles
           color    = d3.scale.category10(); //color category
 
           var bubble = d3.layout.pack()
           .sort(null)
-          .size([diameter+350, diameter])
-          .padding(1.5);
+          .size([diameter, diameter])
 
           var svg = chart.append("svg")
-          .attr("width", diameter)
-          .attr("height", diameter)
+          .attr("preserveAspectRatio", "xMinYMin meet")
+          .attr("viewBox", "0 0 600 500")
           .attr("class", "bubble");
 
           function render(data){
@@ -108,7 +95,7 @@
 
             //setup the chart
             var bubbles = svg.append("g")
-            .attr("transform", "translate(0,0)")
+            .attr("transform", "translate(75,0)")
             .selectAll(".bubble")
             .data(nodes)
             .enter();
@@ -118,7 +105,7 @@
             .append("div")
             .attr("class", "popup")
             .style("position", "absolute")
-            .style("color", "white")
+            .style("color", "#E5E5E5")
             .style("z-index", "10")
             .style("visibility", "hidden")
 
@@ -139,7 +126,7 @@
             .attr("y", function(d){ return d.y + 5; })
             .attr("text-anchor", "middle")
             .style({
-              "fill":"white",
+              "fill":"#E5E5E5",
               "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
               "font-size": "12px"
             });
@@ -163,7 +150,6 @@
           //a little of magic: setting it's width based
           //on the data value (d)
           //and text all with a smooth transition
-
 
         };
 

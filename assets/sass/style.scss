@@ -36,21 +36,13 @@ body {
 }
 
 body {
-  background: url("http://i.imgur.com/LtEagrn.jpg");
-  background-position: center;
+  background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
   background-size: cover;
+  overflow: auto;
 }
 
 .data-container {
-  background: url("http://i.imgur.com/LtEagrn.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.player-cards {
-  background: url("http://i.imgur.com/C8F9Okq.jpg");
-  background-position: center;
-  background-size: cover;
+  padding-top: 7%;
 }
 
 .player-card-title {
@@ -85,13 +77,17 @@ h2, h3 {
 }
 
 nav {
+  width: 100%;
+  position: fixed;
   text-align: center;
   font-size: 2em;
   list-style-type: none;
   text-decoration: none;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
   background-color: rgba(0, 0, 0,0.6);
+  top:0;
 }
 
 nav a {
@@ -114,9 +110,15 @@ nav a {
   margin: 0 auto;
 }
 
+.chart,.bubble {
+  padding-bottom: 15%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
 .chart {
-  padding: 3px;
-  width: 100%;
+  padding-top: 2%;
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 .bar {
@@ -142,8 +144,8 @@ nav a {
 }
 
 .bubble {
-  padding: 3px;
-  width: 100%;
+  width: 75%;
+  margin-bottom: 5%;
 }
 
 .circle:hover{
@@ -152,10 +154,29 @@ nav a {
 
 .player-card {
   text-decoration: none;
+  color:$lightFontColor;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
 }
 
-.player-link {
+.player-link,.player-card p {
   text-decoration: none;
+  color:$lightFontColor;
+}
+
+.player-link:hover {
+  color:tomato;
+}
+
+.playerDiv {
+  margin: 0 auto;
+  margin-top: 10%;
+  color:$lightFontColor;
+  background-color: rgba(0, 0, 0,0.5);
+  width: 25%;
+}
+
+.player-show-image {
+  width: 20%;
 }
 
 .comment-section {
@@ -183,7 +204,7 @@ nav a {
   // border: 2px solid tomato;
   /*display: inline-block;*/
   float: left;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -236,5 +257,23 @@ nav a {
   .column {
     margin: 1% 0 1% 0%;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  body {
+    font-size: .8em;
+  }
+  .index-title,nav {
+    font-size: 1.7em;
+  }
+  .aboutMe h1, .portfolio h1, .experience h1, .contact h1 {
+    font-size: 2em;
+  }
+  .results h3 {
+    font-size: 1.3em;
+  }
+  .filter {
+    font-size: 1em;
   }
 }

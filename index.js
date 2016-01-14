@@ -12,7 +12,8 @@ var request = require('request')
 // loads module containing all authors contrller actions. not defined yet...
 var commentsController = require("./controllers/commentsController")
 // connect mongoose interfaces to reminders mongo db
-mongoose.connect('mongodb://localhost/reminders')
+var mongodbUri = 'mongodb://localhost/baseballvisuals';
+mongoose.connect(process.env.MONGOLAB_URI || mongodbUri)
 var app = express()
 
 // allows for parameters in JSON and html
@@ -33,6 +34,6 @@ app.use(passport.session());
 app.use("/", commentsController)
 
 // app server located on port 4000
-app.listen(4000, function(){
+app.listen(process.env.PORT || 4000, function() {
   console.log("app listening on port 4000")
 })

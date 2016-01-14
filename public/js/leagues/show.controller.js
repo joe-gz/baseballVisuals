@@ -115,16 +115,6 @@ angular.module('leagues').controller('LeagueShowController', function(
         return false;
       }
     };
-    //
-    // $scope.customFilter = function (resultsArray) {
-    //   if (Number(resultsArray.price) === $scope.filterPrice.result.price) {
-    //     return true;
-    //   } else if ($scope.filterPrice.result.price === 'Show All') {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // };
 
     // Return league data based on searched ID
     LeagueFactory.getLeagueData($stateParams.id).then($scope.loadLeague);

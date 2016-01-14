@@ -1,6 +1,8 @@
 <form>
   <textarea placeholder="Comment" data-ng-model="comment.comment"></textarea>
-  <button type="button" data-ng-if="!comment._id" data-ng-click="create()">Create</button>
+  <div>
+    <button type="button" data-ng-if="!comment._id" data-ng-click="create()">Post</button>
+  </div>
   <div data-ng-if="comment._id">
     <button type="button" data-ng-click="update()">Update</button>
     <button type="button" data-ng-click="delete()">Delete</button>

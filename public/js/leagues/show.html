@@ -1,26 +1,30 @@
-<h2>{{league.query.results.league.name}}</h2>
+<div class="data-container">
+  <h2 class = 'league-name'>{{league.query.results.league.name}}</h2>
 
-<div>
-  Player Draft Prices
-  <bars-chart filter-round="filterRound.result" chart-data="resultsArray" ng-if="contentDone"></bars-chart>
-</div>
+  <div class = "row filter">
+    <div class = "column column-4">
+      <div>Filter by Round</div>
+      <form name="roundDropdown">
+        <label for="round"> Round: </label>
+        <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
+        </select>
+      </form>
+      <tt>round = {{filterRound.result.round}}</tt>
+    </div>
+  </div>
 
-<div>
-  <circle-chart filter-round="filterRound.result" circle-data="resultsArray" ng-if="contentDone"></circle-chart>
-</div>
-
-<div class = "row">
-  <div class = "column column-4">
-    <form name="roundDropdown">
-      <label for="round"> Round: </label>
-      <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
-      </select>
-    </form>
-    <tt>round = {{filterRound.result.round}}</tt>
+  <div class = "results">
+    <h3>
+      Player Draft Prices
+    </h3>
+    <bars-chart filter-round="filterRound.result" chart-data="resultsArray" ng-if="contentDone"></bars-chart>
   </div>
 </div>
 
-<div class="row">
+<div class="row player-cards">
+  <h3 class = "player-card-title">
+    Player Cards
+  </h3>
   <div class = "column column-4" data-ng-repeat="listed in resultsArray | filter:customFilter">
     <img data-ng-src="{{listed.photo}}" alt="" />
     <p>Name: <a data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
@@ -30,15 +34,14 @@
   </div>
 </div>
 
-
-<div class = "row" ng-controller="CommentIndexController">
+<div class = "comment-section">
   <h2>New Comment</h2>
 
-  <div data-comment-form data-comment="CommentIndexViewModel.newComment"></div>
+  <div data-comment-form data-comment="newComment"></div>
 
-  <h2>These are all the Comments</h2>
+  <h2>Comments</h2>
 
-  <div data-ng-repeat="comment in CommentIndexViewModel.comments">
+  <div data-ng-repeat="comment in commentsArray[0]">
     <p><a data-ui-sref="commentShow({id: comment._id})">{{comment.comment}}</a></p>
   </div>
 </div>

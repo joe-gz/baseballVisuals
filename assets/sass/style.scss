@@ -1,48 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+$headerFont:'Josefin Slab';
+$textFont:'Josefin Sans';
+$lightFontColor:#E5E5E5;
+$darkFontColor:#3A383B;
+
 * {
   box-sizing: border-box;
 }
 
-body {
+html {
   margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-// .chart {
-//   background: #eee;
-//   // padding: 3px;
-//   width: 100%;
-//   margin: 0 auto;
-// }
-//
-// // rect {
-// //   width: 0;
-// //   transition: all 1s ease-out;
-// //   -moz-transition: all 1s ease-out;
-// //   -webkit-transition: all 1s ease-out;
-// // }
-//
-// rect {
-//   transition: all 1s ease-out;
-//   -moz-transition: all 1s ease-out;
-//   -webkit-transition: all 1s ease-out;
-//   // font: 10px sans-serif;
-//   fill: steelblue;
-//   text-align: right;
-//   // padding: 5px;
-//   // margin: 5px;
-//   color: white;
-//   box-shadow: 2px 2px 2px #666;
-// }
-//
-// rect:hover {
-//   fill: turquoise;
-// }
-//
-// .x-axis,.y-axis{
-//   font-size: .8em;
-// }
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url("http://i.imgur.com/LtEagrn.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.data-container {
+  background: url("http://i.imgur.com/LtEagrn.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.player-cards {
+  background: url("http://i.imgur.com/C8F9Okq.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.player-card-title {
+  padding-top: 2%;
+}
+
+h2, h3 {
+  margin: 0;
+  font-family: $headerFont;
+  color: $lightFontColor;
+}
+
+.index-title {
+  font-size: 2em;
+  padding-top: 15%;
+}
+
+.results {
+  padding-top: 2%;
+  color: white;
+}
+
+.league-name {
+  margin: 0;
+  color: white;
+  padding-top: 2%;
+}
+
+nav {
+  text-align: center;
+  font-size: 2em;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(0, 0, 0,0.6);
+}
+
+nav a {
+  font-family: $headerFont;
+  color: $lightFontColor;
+  text-decoration: none;
+}
+
+.filter {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: $textFont;
+  color: $lightFontColor;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.league-form,.view-frame {
+  text-align: center;
+  margin: 0 auto;
+}
 
 .chart {
-  background: #eee;
   padding: 3px;
   width: 100%;
 }
@@ -62,7 +116,7 @@ body {
 }
 
 .bar:hover {
-  background-color: rgb(0, 229, 238);
+  opacity: 0.6;
 }
 
 .popup {
@@ -70,17 +124,33 @@ body {
 }
 
 .bubble {
-  background: #eee;
   padding: 3px;
   width: 100%;
 }
 
-#yahoo-login {
-  width: 25%;
+.circle:hover{
+  fill-opacity: 0.6;
 }
 
-.row {
-  border: 2px solid black;
+.comment-section {
+  padding-top: 2%;
+  background-color: white;
+  text-decoration: none;
+  padding-bottom: 3%;
+}
+
+.comment-section h2 {
+  padding-top: 1%;
+}
+
+.comment-section h2, .comment-section div, .comment-section a {
+  font-family: $textFont;
+  color: $darkFontColor;
+  text-decoration: none;
+}
+
+#yahoo-login {
+  width: 25%;
 }
 
 .column {

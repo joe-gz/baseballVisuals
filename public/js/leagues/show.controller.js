@@ -4,26 +4,17 @@ angular.module('leagues').controller('LeagueShowController', function(
   $scope,
   $stateParams,
   LeagueFactory,
-  DraftFactory){
+  DraftFactory,
+  CommentFactory){
 
     $scope.playerCount = 0;
     $scope.resultsArray = [];
+    $scope.commentsArray = [];
+    $scope.newComment = new CommentFactory();
 
     $scope.roundArray = {
       rounds: [
         {round: 'Show All' },
-        {round: 15 },
-        {round: 14 },
-        {round: 13 },
-        {round: 12 },
-        {round: 11 },
-        {round: 10 },
-        {round: 9 },
-        {round: 8 },
-        {round: 7 },
-        {round: 6 },
-        {round: 5 },
-        {round: 4 },
         {round: 3 },
         {round: 2 },
         {round: 1 }
@@ -31,7 +22,7 @@ angular.module('leagues').controller('LeagueShowController', function(
     };
 
     $scope.filterRound = {
-      result: $scope.roundArray.rounds[0]
+      result: $scope.roundArray.rounds[$scope.roundArray.rounds.length-1]
     }
 
     // ****** Iterated away from original LeagueShowControllerFunction to separate for loops
@@ -71,6 +62,10 @@ angular.module('leagues').controller('LeagueShowController', function(
 
     $scope.loadLeague = function(leagueData){
       $scope.league = leagueData.data;
+      $scope.comments = CommentFactory.query(function(comments){
+        $scope.commentsArray.push(comments);
+        console.log($scope.commentsArray);
+      });
       $scope.leagueResults = $scope.league.query.results.league.draft_results.draft_result;
       $scope.getResults($scope.leagueResults);
     };

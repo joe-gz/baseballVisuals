@@ -1,16 +1,15 @@
-<h2>{{LeagueShowViewModel}}</h2>
 <!--
 <div data-ng-repeat="result in LeagueShowViewModel.league.query.results.league.draft_results.draft_result">
 <p>{{result.player_key}}</p>
 </div> -->
 <!-- <charter></charter> -->
 
-<div data-ng-repeat="listed in PlayerShowViewModel.player">
-  <img data-ng-src="{{listed.results.player.headshot.url}}" alt="" />
-  <p>Name: {{listed.results.player.name.full}}</p>
-  <p>Positions: {{listed.results.player.eligible_positions.position}}</p>
-  <p>Stats for {{listed.results.player.player_stats.season}}:</p>
-  <div data-ng-repeat="stat in PlayerShowViewModel.statistics">
+<div data-ng-repeat="listed in playerInfo">
+  <img data-ng-src="{{listed.query.results.player.headshot.url}}" alt="" />
+  <p>Name: {{listed.query.results.player.name.full}}</p>
+  <p>Positions: {{listed.query.results.player.eligible_positions.position}}</p>
+  <p>Stats for {{listed.query.results.player.player_stats.season}}:</p>
+  <div data-ng-repeat="stat in statistics[0]">
     <div>{{stat.statName}}: {{stat.value}}</div>
   </div>
 </div>

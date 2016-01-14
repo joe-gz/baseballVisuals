@@ -23,7 +23,6 @@
       //passed thru chart-data attribute
       scope: {data: '=chartData', filter: '=filterRound'},
       link: function (scope, element, attrs) {
-        console.log(scope.data);
 
         scope.masterData = scope.data;
 
@@ -59,21 +58,6 @@
 
 
         scope.loadChart = function(){
-          color    = d3.scale.category10();
-          var bar = chart.append("div").attr("class", "chart")
-          .selectAll('div')
-          .data(scope.data).enter();
-
-          bar.append("div")
-          .attr("class", "bar")
-          .transition().ease("elastic")
-          .style("width", function(d) { return d.cost + "%"; })
-          .style("background-color", function(d) { return color(d.cost); })
-          .text(function(d) { return d.playerName +" $"+ d.cost; });
-          //a little of magic: setting it's width based
-          //on the data value (d)
-          //and text all with a smooth transition
-
           // *******************************************************
 
           var diameter = 500, //max size of the bubbles
@@ -93,7 +77,6 @@
 
             //convert numerical values from strings to numbers
             data = data.map(function(d){ d.value = +Number(d.cost); return d; });
-            console.log(data);
 
             //bubbles needs very specific format, convert data to this.
             var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
@@ -110,7 +93,7 @@
             .append("div")
             .attr("class", "popup")
             .style("position", "absolute")
-            .style("color", "red")
+            .style("color", "white")
             .style("z-index", "10")
             .style("visibility", "hidden")
 
@@ -139,6 +122,23 @@
 
           render(scope.data)
           // *******************************************************
+
+
+          color    = d3.scale.category10();
+          var bar = chart.append("div").attr("class", "chart")
+          .selectAll('div')
+          .data(scope.data).enter();
+
+          bar.append("div")
+          .attr("class", "bar")
+          .transition().ease("elastic")
+          .style("width", function(d) { return d.cost + "%"; })
+          .style("background-color", function(d) { return color(d.cost); })
+          .text(function(d) { return d.playerName +" $"+ d.cost; });
+          //a little of magic: setting it's width based
+          //on the data value (d)
+          //and text all with a smooth transition
+
 
         };
 

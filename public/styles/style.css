@@ -1,11 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 * {
   box-sizing: border-box; }
 
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%; }
+
 body {
-  margin: 0px; }
+  margin: 0px;
+  min-height: 100%;
+  width: 100%; }
+
+body {
+  background: url("http://i.imgur.com/LtEagrn.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.data-container {
+  background: url("http://i.imgur.com/LtEagrn.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.player-cards {
+  background: url("http://i.imgur.com/C8F9Okq.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.player-card-title {
+  padding-top: 2%; }
+
+h2, h3 {
+  margin: 0;
+  font-family: "Josefin Slab";
+  color: #E5E5E5; }
+
+.index-title {
+  font-size: 2em;
+  padding-top: 15%; }
+
+.results {
+  padding-top: 2%;
+  color: white; }
+
+.league-name {
+  margin: 0;
+  color: white;
+  padding-top: 2%; }
+
+nav {
+  text-align: center;
+  font-size: 2em;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+nav a {
+  font-family: "Josefin Slab";
+  color: #E5E5E5;
+  text-decoration: none; }
+
+.filter {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: "Josefin Sans";
+  color: #E5E5E5;
+  text-decoration: none;
+  font-size: 1.2em; }
+
+.league-form, .view-frame {
+  text-align: center;
+  margin: 0 auto; }
 
 .chart {
-  background: #eee;
   padding: 3px;
   width: 100%; }
 
@@ -22,21 +92,34 @@ body {
   box-shadow: 2px 2px 2px #666; }
 
 .bar:hover {
-  background-color: #00e5ee; }
+  opacity: 0.6; }
 
 .popup {
   color: white; }
 
 .bubble {
-  background: #eee;
   padding: 3px;
   width: 100%; }
 
+.circle:hover {
+  fill-opacity: 0.6; }
+
+.comment-section {
+  padding-top: 2%;
+  background-color: white;
+  text-decoration: none;
+  padding-bottom: 3%; }
+
+.comment-section h2 {
+  padding-top: 1%; }
+
+.comment-section h2, .comment-section div, .comment-section a {
+  font-family: "Josefin Sans";
+  color: #3A383B;
+  text-decoration: none; }
+
 #yahoo-login {
   width: 25%; }
-
-.row {
-  border: 2px solid black; }
 
 .column {
   /*display: inline-block;*/

@@ -7,25 +7,25 @@ function error(response, message){
   response.json({error: message})
 }
 
-router.get("/leagues", function(req, res){
+router.get("/comments", function(req, res){
   CommentModel.find({}).then(function(comments){
     res.json(comments);
   });
 });
 
-router.get("/leagues/:id", function(req, res){
+router.get("/comments/:id", function(req, res){
   CommentModel.findById(req.params.id).then(function(comment){
     res.json(comment);
   });
 });
 
-router.put("/leagues/:id", function(req, res){
+router.put("/comments/:id", function(req, res){
   CommentModel.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}).then(function(comment){
     res.json(comment);
   });
 });
 
-router.post("/leagues", function(req, res){
+router.post("/comments", function(req, res){
   console.log("hit");
   var comment = new CommentModel({comment:req.body.comment})
   comment.save(function(err,comment){
@@ -34,7 +34,7 @@ router.post("/leagues", function(req, res){
   })
 });
 
-router.delete("/leagues/:id", function(req, res){
+router.delete("/comments/:id", function(req, res){
   CommentModel.findById(req.params.id).then(function(comment){
     return comment.remove();
   }).then(function(){

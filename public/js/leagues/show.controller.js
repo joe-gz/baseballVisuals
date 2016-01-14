@@ -11,7 +11,6 @@ angular.module('leagues').controller('LeagueShowController', function(
     $scope.resultsArray = [];
     $scope.commentsArray = [];
     $scope.newComment = new CommentFactory();
-    $scope.commentFunctions = CommentFactory.get({id: $stateParams.id});
 
     $scope.roundArray = {
       rounds: [
@@ -90,7 +89,7 @@ angular.module('leagues').controller('LeagueShowController', function(
     $scope.loadLeague = function(leagueData){
       $scope.league = leagueData.data;
       $scope.comments = CommentFactory.query(function(comments){
-        $scope.commentsArray.push(comments);
+        $scope.commentsArray.push(comments.reverse());
         console.log($scope.commentsArray);
       });
       $scope.leagueResults = $scope.league.query.results.league.draft_results.draft_result;

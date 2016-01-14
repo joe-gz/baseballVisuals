@@ -54,8 +54,5 @@
 
   <div data-ng-repeat="comment in commentsArray[0]">
     <p><a data-ui-sref="commentShow({id: comment._id})">{{comment.comment}}</a></p>
-    <div data-ng-if="comment._id">
-      <button type="button" data-comment="commentFunctions" data-ng-click="delete()">Delete</button>
-    </div>
   </div>
 </div>

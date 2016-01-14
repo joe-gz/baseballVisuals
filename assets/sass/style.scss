@@ -86,7 +86,7 @@ nav {
   margin: 0 auto;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-color: rgba(0, 0, 0,0.6);
+  background-color: rgba(0, 0, 0,0.7);
   top:0;
 }
 
@@ -97,6 +97,8 @@ nav a {
 }
 
 .filter {
+  width: 75%;
+  margin-left: 12.5%;
   margin-top: 2%;
   margin-bottom: 2%;
   font-family: $textFont;
@@ -111,12 +113,12 @@ nav a {
 }
 
 .chart,.bubble {
-  padding-bottom: 15%;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0));
+  background: rgba(0,0,0,0.7);
 }
 
 .chart {
   padding-top: 2%;
+  padding-bottom: 2%;
   width: 75%;
   margin-left: 12.5%;
 }
@@ -132,7 +134,7 @@ nav a {
   padding: 5px;
   margin: 5px;
   color: white;
-  box-shadow: 2px 2px 2px #666;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .bar:hover {
@@ -155,7 +157,11 @@ nav a {
 .player-card {
   text-decoration: none;
   color:$lightFontColor;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.player-card:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.8);
 }
 
 .player-link,.player-card p {
@@ -171,8 +177,10 @@ nav a {
   margin: 0 auto;
   margin-top: 10%;
   color:$lightFontColor;
-  background-color: rgba(0, 0, 0,0.5);
+  background-color: rgba(0, 0, 0,0.8);
   width: 25%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .player-show-image {
@@ -258,6 +266,10 @@ nav a {
     margin: 1% 0 1% 0%;
     width: 100%;
   }
+}
+
+.show-comments {
+  padding-top: 10%;
 }
 
 @media only screen and (max-width: 568px) {

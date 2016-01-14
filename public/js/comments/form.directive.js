@@ -23,12 +23,12 @@
         }
         scope.update = function(){
           scope.comment.$update({id: scope.comment._id}, function(response){
-            $state.go("leagueShow", {}, {reload: true});
+            $state.go("leagueIndex", {}, {reload: true});
           });
         }
         scope.delete = function(){
           scope.comment.$delete({id: scope.comment._id}, function(){
-            $state.go("leagueShow", {}, {reload: true});
+            $state.go("leagueIndex", {}, {reload: true});
           });
         }
       }

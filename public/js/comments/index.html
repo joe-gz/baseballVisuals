@@ -1,9 +1,11 @@
-<h2>New Comment</h2>
+<div class = "show-comments">  
+  <h2>New Comment</h2>
 
-<div data-comment-form data-comment="CommentIndexViewModel.newComment"></div>
+  <div data-comment-form data-comment="CommentIndexViewModel.newComment"></div>
 
-<h2>These are all the Comments</h2>
+  <h2>These are all the Comments</h2>
 
-<div data-ng-repeat="comment in CommentIndexViewModel.comments">
-  <p><a data-ui-sref="commentShow({id: comment._id})">{{comment.comment}}</a></p>
+  <div data-ng-repeat="comment in CommentIndexViewModel.comments">
+    <p><a data-ui-sref="commentShow({id: comment._id})">{{comment.comment}}</a></p>
+  </div>
 </div>

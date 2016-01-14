@@ -6,6 +6,19 @@ $textFont:'Josefin Sans';
 $lightFontColor:#E5E5E5;
 $darkFontColor:#3A383B;
 
+@function contrastingColor($bgcolor){
+  @if lightness($bgcolor) < 35 {
+    @return $lightFontColor;
+  }
+  @else {@return $darkFontColor;
+  }
+}
+
+@mixin backgroundToFont($background) {
+  color:contrastingColor($background);
+  background-color:$background;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -58,6 +71,11 @@ h2, h3 {
 .results {
   padding-top: 2%;
   color: white;
+  padding-bottom: 2%;
+}
+
+.results h3 {
+  font-size: 1.5em;
 }
 
 .league-name {
@@ -130,6 +148,14 @@ nav a {
 
 .circle:hover{
   fill-opacity: 0.6;
+}
+
+.player-card {
+  text-decoration: none;
+}
+
+.player-link {
+  text-decoration: none;
 }
 
 .comment-section {

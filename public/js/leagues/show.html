@@ -2,7 +2,7 @@
   <h2 class = 'league-name'>{{league.query.results.league.name}}</h2>
 
   <div class = "row filter">
-    <div class = "column column-4">
+    <div class = "column column-6">
       <div>Filter by Round</div>
       <form name="roundDropdown">
         <label for="round"> Round: </label>
@@ -11,13 +11,23 @@
       </form>
       <tt>round = {{filterRound.result.round}}</tt>
     </div>
+
+    <div class = "column column-6">
+      <div>Filter by Position</div>
+      <form name="positionDropdown">
+        <label for="position"> Position: </label>
+        <select name="position" id="position" ng-model="filterPosition.result" ng-options="draft.position for draft in positionArray.positions">
+        </select>
+      </form>
+      <tt>position = {{filterPosition.result.position}}</tt>
+    </div>
   </div>
 
   <div class = "results">
     <h3>
       Player Draft Prices
     </h3>
-    <bars-chart filter-round="filterRound.result" chart-data="resultsArray" ng-if="contentDone"></bars-chart>
+    <bars-chart filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bars-chart>
   </div>
 </div>
 
@@ -25,9 +35,9 @@
   <h3 class = "player-card-title">
     Player Cards
   </h3>
-  <div class = "column column-4" data-ng-repeat="listed in resultsArray | filter:customFilter">
+  <div class = "column column-4 player-card" data-ng-repeat="listed in resultsArray | filter:positionFilter | filter:customFilter">
     <img data-ng-src="{{listed.photo}}" alt="" />
-    <p>Name: <a data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
+    <p>Name: <a class = "player-link" data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
     <p>Positions: {{listed.position}}</p>
     <p>Draft Round: {{listed.round}}</p>
     <p>Cost: {{listed.cost}}</p>

@@ -21,12 +21,15 @@
       replace: false,
       //our data source would be an array
       //passed thru chart-data attribute
-      scope: {data: '=chartData', filter: '=filterRound'},
+      scope: {data: '=chartData', filter: '=filterRound', filterPosition:'=filterPosition'},
       link: function (scope, element, attrs) {
 
         scope.masterData = scope.data;
 
-        scope.$watch('filter', function(newValue, oldValue) {
+        scope.$watch('filter', filterWatch, true);
+
+        function filterWatch(newValue, oldValue) {
+          console.log(this)
 
           $('.chart').remove();
           $('.bubble').remove();
@@ -46,7 +49,29 @@
 
           scope.loadChart();
           console.log('NEW VALUE: ' + newValue.round);
-        }, true);
+        }
+
+        // scope.$watch('filterPosition', function(newValue, oldValue) {
+        //
+        //   $('.chart').remove();
+        //   $('.bubble').remove();
+        //   scope.data = [];
+        //
+        //   if (newValue.position === 'Show All') {
+        //     console.log('Make everything show!');
+        //     scope.data = scope.masterData
+        //   } else {
+        //     for (var i = 0; i < scope.masterData.length; i++){
+        //       if (Number(scope.masterData[i].position) === newValue.position) {
+        //         console.log('SHOW JUST '+ scope.masterData[i].position);
+        //         scope.data.push(scope.masterData[i])
+        //       }
+        //     }
+        //   }
+        //
+        //   scope.loadChart();
+        //   console.log('NEW VALUE: ' + newValue.position);
+        // }, true);
 
         //in D3, any selection[0] contains the group
         //selection[0][0] is the DOM node

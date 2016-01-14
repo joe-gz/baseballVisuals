@@ -15,14 +15,40 @@ angular.module('leagues').controller('LeagueShowController', function(
     $scope.roundArray = {
       rounds: [
         {round: 'Show All' },
-        {round: 3 },
+        {round: 1 },
         {round: 2 },
-        {round: 1 }
+        {round: 3 }
       ]
     };
 
     $scope.filterRound = {
-      result: $scope.roundArray.rounds[$scope.roundArray.rounds.length-1]
+      result: $scope.roundArray.rounds[1]
+    }
+
+    $scope.positionArray = {
+      positions: [
+        {position: 'Show All' },
+        {position: 'SS' },
+        {position: 'CF' },
+        {position: 'SP' }
+      ]
+    };
+
+    $scope.filterPosition = {
+      result: $scope.positionArray.positions[0]
+    }
+
+    $scope.priceArray = {
+      prices: [
+        {price: 'Show All' },
+        {price: 3 },
+        {price: 2 },
+        {price: 1 }
+      ]
+    };
+
+    $scope.filterPrice = {
+      result: $scope.priceArray.prices[0]
     }
 
     // ****** Iterated away from original LeagueShowControllerFunction to separate for loops
@@ -49,7 +75,7 @@ angular.module('leagues').controller('LeagueShowController', function(
       DraftFactory.getPlayerData(playerID).then(function(playerData){
         $scope.resultsArray[index].playerName = playerData.data.query.results.player.name.full;
         $scope.resultsArray[index].photo = playerData.data.query.results.player.headshot.url;
-        $scope.resultsArray[index].position = playerData.data.query.results.player.eligible_positions.position;
+        $scope.resultsArray[index].position = playerData.data.query.results.player.display_position;
         $scope.playerCount++;
 
         // IMPORTANT - this tells the chart directive that it is time to run AFTER all of the data are pushed
@@ -80,13 +106,23 @@ angular.module('leagues').controller('LeagueShowController', function(
       }
     };
 
-
-    // $scope.pushRounds = function(playerRound){
-    //   var trueCount = 0;
-    //   for (var i = 0; i <= $scope.resultsArray.length; i++){
-    //     if(playerRound === $scope.roundArray[i]) {
-    //       trueCount++
-    //     }
+    $scope.positionFilter = function (resultsArray) {
+      if (resultsArray.position === $scope.filterPosition.result.position) {
+        return true;
+      } else if ($scope.filterPosition.result.position === 'Show All') {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    //
+    // $scope.customFilter = function (resultsArray) {
+    //   if (Number(resultsArray.price) === $scope.filterPrice.result.price) {
+    //     return true;
+    //   } else if ($scope.filterPrice.result.price === 'Show All') {
+    //     return true;
+    //   } else {
+    //     return false;
     //   }
     // };
 

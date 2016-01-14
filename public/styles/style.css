@@ -42,7 +42,11 @@ h2, h3 {
 
 .results {
   padding-top: 2%;
-  color: white; }
+  color: white;
+  padding-bottom: 2%; }
+
+.results h3 {
+  font-size: 1.5em; }
 
 .league-name {
   margin: 0;
@@ -103,6 +107,12 @@ nav a {
 
 .circle:hover {
   fill-opacity: 0.6; }
+
+.player-card {
+  text-decoration: none; }
+
+.player-link {
+  text-decoration: none; }
 
 .comment-section {
   padding-top: 2%;

@@ -1,4 +1,4 @@
-# fsVisuals
+# baseballVisuals
 
 ## User Stories
 

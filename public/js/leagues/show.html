@@ -5,7 +5,7 @@
     <div class = "column column-6">
       <div>Filter by Round</div>
       <form name="roundDropdown">
-        <label for="round"> Round: </label>
+        <!-- <label for="round"> Round: </label> -->
         <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
         </select>
       </form>
@@ -15,7 +15,7 @@
     <div class = "column column-6">
       <div>Filter by Position</div>
       <form name="positionDropdown">
-        <label for="position"> Position: </label>
+        <!-- <label for="position"> Position: </label> -->
         <select name="position" id="position" ng-model="filterPosition.result" ng-options="draft.position for draft in positionArray.positions">
         </select>
       </form>

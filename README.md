@@ -7,13 +7,13 @@ The app is built in the MEAN stack, and makes use of D3 charting.
 
 ## Use
 
-**NOTE - currently this app is still in the process of obtaining access through Yahoo's oAuth.  Therefore, there is only sample data.  To view the data right now, please search for league ID 82326**
+**NOTE - currently this app is still in the process of obtaining access through Yahoo's oAuth.  Therefore, there is only sample data.  To view the data right now, please search for league ID 82326.**
 To search for one's league, you need to know your league ID for your Yahoo league. Simply set that in the search field and your data should populate
 
 ## Installation
 
 **mongodb must be running**
-**NPM Install**
+- NPM Install
 - Suggest using "nodemon"
 - Must be using SASS for styling changes
 

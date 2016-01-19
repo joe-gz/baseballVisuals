@@ -1,7 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Playball);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 * {
   box-sizing: border-box; }
+
+*:focus {
+  outline: none; }
 
 html {
   margin: 0px;
@@ -11,7 +14,8 @@ html {
 body {
   margin: 0px;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  font-family: "Josefin Sans"; }
 
 .container {
   margin: 0px;
@@ -20,6 +24,9 @@ body {
   background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
   background-size: cover;
   overflow: auto; }
+
+.visuals {
+  color: #d62d34; }
 
 main {
   margin: 0px;
@@ -30,6 +37,40 @@ main {
 .data-container {
   padding-top: 7%; }
 
+.league-search {
+  font-family: "Josefin Sans";
+  max-width: 85%;
+  width: 20em;
+  border-radius: 1em;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: none;
+  font-size: 1.15em;
+  padding: 1em 1.25em;
+  margin: 0.5em 0;
+  background: rgba(255, 255, 255, 0.33);
+  transition: all ease 0.33s; }
+  .league-search:focus {
+    background: rgba(255, 255, 255, 0.75); }
+
+:placeholder-shown {
+  color: #fff; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
+
+.search-button {
+  font-family: "Josefin Sans";
+  font-size: 1.15em;
+  max-width: 85%;
+  width: 20em;
+  border: none;
+  border-radius: 1em;
+  background: #d62d34;
+  color: #E5E5E5;
+  padding: 0.67em;
+  margin: 0.67em 0; }
+
 .player-card-title {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -39,7 +80,7 @@ main {
 
 h2, h3 {
   margin: 0;
-  font-family: "Josefin Slab";
+  font-family: "Playball";
   color: #E5E5E5; }
 
 h3 {
@@ -47,7 +88,8 @@ h3 {
 
 .index-title {
   font-size: 2em;
-  padding-top: 15%; }
+  padding-top: 10%;
+  margin: 0.5em 0 0.75em; }
 
 .results {
   padding-top: 2%;
@@ -70,15 +112,16 @@ nav {
   list-style-type: none;
   text-decoration: none;
   margin: 0 auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.975);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   top: 0; }
 
 nav a {
-  font-family: "Josefin Slab";
-  color: #E5E5E5;
-  text-decoration: none; }
+  font-family: "Playball";
+  color: #3A383B;
+  text-decoration: none;
+  padding: 0.25em 0 0.15em;
+  display: block; }
 
 .filter {
   width: 75%;

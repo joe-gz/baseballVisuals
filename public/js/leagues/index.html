@@ -1,13 +1,15 @@
 <div class="index-container">
-<h2 class = "index-title">Search for Your League</h2>
+  <h2 class = "index-title">Search for Your League</h2>
 
-<!-- <div data-league-form data-league="LeagueIndexViewModel.league"></div> -->
-<form class = "league-form">
-  <input placeholder="League ID" data-ng-model="league_id"></input>
-  <a data-ui-sref="leagueShow({id:league_id})"><button type="button">Find League</button></a>
-</form>
+  <!-- <div data-league-form data-league="LeagueIndexViewModel.league"></div> -->
+  <form class = "league-form">
+    <input class = "league-search" placeholder="League ID" data-ng-model="league_id"></input>
+    <div>
+      <a data-ui-sref="leagueShow({id:league_id})"><button class = "search-button" type="button">Find League</button></a>
+    </div>
+  </form>
 
-<!-- <div data-ng-repeat="league in LeagueIndexViewModel.leagues">
+  <!-- <div data-ng-repeat="league in LeagueIndexViewModel.leagues">
   <p><a data-ui-sref="leagueShow({id: league.results.league.league_id})">{{league.results.league.name}}</a></p>
 </div> -->
 </div>

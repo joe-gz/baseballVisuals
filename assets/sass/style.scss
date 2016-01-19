@@ -1,10 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Playball);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
-$headerFont:'Josefin Slab';
+$headerFont:'Playball';
 $textFont:'Josefin Sans';
 $lightFontColor:#E5E5E5;
 $darkFontColor:#3A383B;
+$colorPrimary:#d62d34;
+$colorSecondary: #ddd944;
+$colorTertiary: #126EA8;
+$colorWhite:#fff;
+$buttonBorderRadius: 1em;
+
 
 @function contrastingColor($bgcolor){
   @if lightness($bgcolor) < 35 {
@@ -23,6 +29,10 @@ $darkFontColor:#3A383B;
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   margin: 0px;
   height: 100%;
@@ -33,6 +43,7 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
+  font-family: $textFont;
 }
 
 .container {
@@ -45,6 +56,10 @@ body {
   overflow: auto;
 }
 
+.visuals{
+  color: $colorPrimary;
+}
+
 main {
   margin: 0px;
   min-height: 100%;
@@ -54,6 +69,46 @@ main {
 
 .data-container {
   padding-top: 7%;
+}
+
+.league-search {
+  font-family: $textFont;
+  max-width: 85%;
+  width: 20em;
+  border-radius: $buttonBorderRadius;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: none;
+  font-size: 1.15em;
+  padding: 1em 1.25em;
+  margin: 0.5em 0;
+  background: fade-out($colorWhite, 0.67);
+  transition: all ease 0.33s;
+
+  &:focus {
+    background: fade-out($colorWhite, 0.25);;
+  }
+}
+
+:placeholder-shown {
+  color: $colorWhite;
+}
+
+::-webkit-input-placeholder {
+  color: $colorWhite;
+}
+
+.search-button {
+  font-family: $textFont;
+  font-size: 1.15em;
+  max-width: 85%;
+  width: 20em;
+  border: none;
+  border-radius: $buttonBorderRadius;
+  background: $colorPrimary;
+  color: $lightFontColor;
+  padding: 0.67em;
+  margin: 0.67em 0;
 }
 
 .player-card-title {
@@ -76,7 +131,8 @@ h3 {
 
 .index-title {
   font-size: 2em;
-  padding-top: 15%;
+  padding-top: 10%;
+  margin: 0.5em 0 0.75em;
 }
 
 .results {
@@ -103,16 +159,17 @@ nav {
   list-style-type: none;
   text-decoration: none;
   margin: 0 auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background-color: rgba(0, 0, 0,0.7);
+  background-color: rgba(255, 255, 255,0.975);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   top:0;
 }
 
 nav a {
   font-family: $headerFont;
-  color: $lightFontColor;
+  color: $darkFontColor;
   text-decoration: none;
+  padding:0.25em 0 0.15em;
+  display: block;
 }
 
 .filter {

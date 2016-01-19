@@ -117,7 +117,10 @@
             .attr("cy", function(d){ return d.y; })
             .style("fill", function(d) { return color(d.value); })
             // .on("mouseover", function(d) {d3.select(this).style("fill", "turquoise");})
-            .on("mouseover", function(d){tooltip.style("visibility", "visible").text(d.playerName+", $"+d.cost);})
+            .on("mouseover", function(d){
+              // d3.select(this).style("fill","white")
+              tooltip.style("visibility", "visible").text(d.playerName+", $"+d.cost);
+            })
             .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
             .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
             //format the text for each bubble

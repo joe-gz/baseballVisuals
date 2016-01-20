@@ -98,7 +98,11 @@ main {
   color: $colorWhite;
 }
 
-.search-button {
+::-moz-placeholder {
+  color: $colorWhite;
+}
+
+.search-link {
   font-family: $textFont;
   font-size: 1.15em;
   max-width: 85%;
@@ -108,21 +112,29 @@ main {
   background: $colorPrimary;
   color: $lightFontColor;
   padding: 0.67em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em auto;
+  display: block;
+  text-decoration: none;
+  transition: background ease 0.33s;
 
-.player-card-title {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  font-size: 1.3em;
-  color:$darkFontColor;
-  background: linear-gradient(rgba(225,225,225,0.9), rgba(225,225,225,0.5));
+  &:hover {
+    background: darken($colorPrimary,15%);
+  }
 }
+//
+// .player-card-title {
+//   padding-top: 1%;
+//   padding-bottom: 1%;
+//   font-size: 1.3em;
+//   color:$darkFontColor;
+//   background: linear-gradient(rgba(225,225,225,0.9), rgba(225,225,225,0.5));
+// }
 
 h2, h3 {
   margin: 0;
   font-family: $headerFont;
   color: $lightFontColor;
+  font-weight: normal;
 }
 
 h3 {
@@ -141,14 +153,18 @@ h3 {
   padding-bottom: 2%;
 }
 
-.results h3 {
+.player-card-title,.results h3 {
   font-size: 1.5em;
 }
 
 .league-name {
-  margin: 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
   color: white;
-  padding-top: 2%;
+  font-size: 1.85em;
+  margin: 0.5em 10% 1.5em;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  text-align: left;
 }
 
 nav {
@@ -162,6 +178,7 @@ nav {
   background-color: rgba(255, 255, 255,0.975);
   box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   top:0;
+  z-index: 1;
 }
 
 nav a {
@@ -181,6 +198,26 @@ nav a {
   color: $lightFontColor;
   text-decoration: none;
   font-size: 1.2em;
+}
+
+.filter label {
+  display: block;
+  font-size: 0.85em;
+  text-align: left;
+}
+.filter select {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0;
+  width: 100%;
+}
+
+.filter select option {
+  display: block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.5em;
+  width: 100%;
 }
 
 .league-form,.view-frame {
@@ -230,17 +267,44 @@ nav a {
 .circle:hover{
   fill-opacity: 0.6;
 }
+//
+// .player-card {
+//   margin: 1%;
+//   text-decoration: none;
+//   color:$lightFontColor;
+//   background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
+//   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+// }
+//
+// .player-card:hover {
+//   box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+// }
 
 .player-card {
+  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  color: $lightFontColor;
   margin: 1%;
+  padding: 0.5em;
+  position: relative;
   text-decoration: none;
-  color:$lightFontColor;
-  background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+  transition: all ease 0.33s;
+  top: 0;
+  transform: none;
 }
-
 .player-card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+  top: -0.4em;
+  transform: scale(1.05,1.05);
+}
+.player-card::before {
+  background: #d62d34 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 4em;
+  left: calc(50% - 2em);
+  position: absolute;
+  // top: 0.8em;
+  width: 4em;
 }
 
 .player-link,.player-card p {

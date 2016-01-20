@@ -3,7 +3,7 @@
 
   <div class = "row filter">
     <div class = "column column-6">
-      <div>Filter by Round</div>
+      <label>Filter by Round</label>
       <form name="roundDropdown">
         <!-- <label for="round"> Round: </label> -->
         <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
@@ -13,7 +13,7 @@
     </div>
 
     <div class = "column column-6">
-      <div>Filter by Position</div>
+      <label>Filter by Position</label>
       <form name="positionDropdown">
         <!-- <label for="position"> Position: </label> -->
         <select name="position" id="position" ng-model="filterPosition.result" ng-options="draft.position for draft in positionArray.positions">
@@ -37,10 +37,10 @@
     </h3>
     <div class = "column column-4 player-card" data-ng-repeat="listed in resultsArray | filter:positionFilter | filter:customFilter">
       <img data-ng-src="{{listed.photo}}" alt="" />
-      <p>Name: <a class = "player-link" data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
+      <p><a class = "player-link" data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
       <p>Positions: {{listed.position}}</p>
       <p>Draft Round: {{listed.round}}</p>
-      <p>Cost: ${{listed.cost}}</p>
+      <p>${{listed.cost}}</p>
     </div>
   </div>
 </div>

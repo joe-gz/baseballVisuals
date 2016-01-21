@@ -198,29 +198,14 @@ nav a {
   fill-opacity: 0.6; }
 
 .player-card {
-  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-  color: #E5E5E5;
   margin: 1%;
-  padding: 0.5em;
-  position: relative;
   text-decoration: none;
-  transition: all ease 0.33s;
-  top: 0;
-  transform: none; }
+  color: #E5E5E5;
+  background: linear-gradient(to top, rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.5));
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4); }
 
 .player-card:hover {
-  top: -0.4em;
-  transform: scale(1.05, 1.05); }
-
-.player-card::before {
-  background: #d62d34 none repeat scroll 0 0;
-  border-radius: 50%;
-  content: "";
-  height: 4em;
-  left: calc(50% - 2em);
-  position: absolute;
-  width: 4em; }
+  box-shadow: 5px 5px 5px 0px rgba(255, 255, 255, 0.8); }
 
 .player-link, .player-card p {
   text-decoration: none;

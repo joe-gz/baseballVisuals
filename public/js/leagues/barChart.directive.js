@@ -6,7 +6,7 @@
 
   //camel cased directive name
   //in your HTML, this will be named as bars-chart
-  .directive('barsChart', function ($parse) {
+  .directive('barChart', function ($parse) {
     //explicitly creating a directive definition variable
     //this may look verbose but is good for clarification purposes
     //in real life you'd want to simply return the object {...}
@@ -83,7 +83,7 @@
           var svg = chart.append("svg")
           .attr("preserveAspectRatio", "xMinYMin meet")
           .attr("viewBox", "0 0 600 500")
-          .attr("class", "bubble");
+          .attr("class", "bubble")
 
           function render(data){
 

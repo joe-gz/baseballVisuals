@@ -27,7 +27,12 @@
     <h3>
       Player Draft Prices
     </h3>
-    <bars-chart filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bars-chart>
+    <button ng-click="clickBar()">Show Bars</button>
+    <button ng-click="clickBubble()">Show Bubbles</button>
+    <div class="chart-wrapper">
+      <bar-chart ng-show="barChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone">hello</bar-chart>
+      <bubble-chart ng-show="bubbleChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone">Hello</bubble-chart>
+    </div>
   </div>
 
 
@@ -36,11 +41,11 @@
       Player Cards
     </h3>
     <div class = "column column-4 player-card" data-ng-repeat="listed in resultsArray | filter:positionFilter | filter:customFilter">
-      <img data-ng-src="{{listed.photo}}" alt="" />
+      <img class = "player-profile-pic" data-ng-src="{{listed.photo}}" alt="" />
       <p><a class = "player-link" data-ui-sref="playerShow({id:listed.shortID})">{{listed.playerName}}</a></p>
       <p>Positions: {{listed.position}}</p>
       <p>Draft Round: {{listed.round}}</p>
-      <p>${{listed.cost}}</p>
+      <div class = "player-price">${{listed.cost}}</div>
     </div>
   </div>
 </div>

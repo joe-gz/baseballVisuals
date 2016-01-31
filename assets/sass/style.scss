@@ -41,7 +41,7 @@ html {
 
 body {
   margin: 0px;
-  height: 100%;
+  // height: 100%;
   width: 100%;
   font-family: $textFont;
 }
@@ -51,7 +51,7 @@ body {
   height: 100%;
   width: 100%;
   background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
-  // opacity: 0.2;
+  background-attachment: fixed;
   background-size: cover;
   overflow: auto;
 }
@@ -267,45 +267,50 @@ nav a {
 .circle:hover{
   fill-opacity: 0.6;
 }
+//
+// .player-card {
+//   margin: 1%;
+//   text-decoration: none;
+//   color:$lightFontColor;
+//   background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
+//   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+// }
+//
+// .player-card:hover {
+//   box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+// }
 
 .player-card {
+  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  color: $lightFontColor;
   margin: 1%;
+  padding: 0.5em;
+  position: relative;
   text-decoration: none;
-  color:$lightFontColor;
-  background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+  transition: all ease 0.33s;
+  top: 0;
+  transform: none;
 }
-
 .player-card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+  top: -0.4em;
+  transform: scale(1.05,1.05);
+}
+.player-card::before {
+  background: #d62d34 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 4em;
+  left: calc(50% - 2em);
+  position: absolute;
+  // top: 0.8em;
+  width: 4em;
 }
 
-// .player-card {
-//   background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
-//   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-//   color: $lightFontColor;
-//   margin: 1%;
-//   padding: 0.5em;
-//   position: relative;
-//   text-decoration: none;
-//   transition: all ease 0.33s;
-//   top: 0;
-//   transform: none;
-// }
-// .player-card:hover {
-//   top: -0.4em;
-//   transform: scale(1.05,1.05);
-// }
-// .player-card::before {
-//   background: #d62d34 none repeat scroll 0 0;
-//   border-radius: 50%;
-//   content: "";
-//   height: 4em;
-//   left: calc(50% - 2em);
-//   position: absolute;
-//   // top: 0.8em;
-//   width: 4em;
-// }
+.player-profile-pic {
+  position: relative;
+  border-radius: 50%;
+}
 
 .player-link,.player-card p {
   text-decoration: none;
@@ -313,8 +318,13 @@ nav a {
   font-family: $textFont;
 }
 
+.player-link,.player-price {
+  font-size: 1.3em;
+  color: #d62d34;
+}
+
 .player-link:hover {
-  color:tomato;
+  color:blue;
 }
 
 .single-player {

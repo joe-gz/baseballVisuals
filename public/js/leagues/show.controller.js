@@ -7,6 +7,16 @@ angular.module('leagues').controller('LeagueShowController', function(
   DraftFactory,
   CommentFactory){
 
+    $scope.clickBubble = function (){
+      $scope.bubbleChart = true;
+      $scope.barChart = false;
+    }
+
+    $scope.clickBar = function (){
+      $scope.bubbleChart = false;
+      $scope.barChart = true;
+    }
+
     $scope.playerCount = 0;
     $scope.resultsArray = [];
     $scope.commentsArray = [];

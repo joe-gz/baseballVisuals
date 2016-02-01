@@ -84,6 +84,7 @@
           .attr("preserveAspectRatio", "xMinYMin meet")
           .attr("viewBox", "0 0 600 500")
           .attr("class", "bubble")
+          .attr("ng-show", "bubbleChart");
 
           function render(data){
 
@@ -140,7 +141,7 @@
 
 
           color    = d3.scale.category10();
-          var bar = chart.append("div").attr("class", "chart")
+          var bar = chart.append("div").attr("class", "chart").attr("ng-show", "barChart")
           .selectAll('div')
           .data(scope.data).enter();
 

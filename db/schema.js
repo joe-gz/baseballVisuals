@@ -7,7 +7,8 @@ var Schema = mongoose.Schema,
 ObjectId = Schema.ObjectId
 
 var CommentSchema = new Schema({
-  comment: String
+  comment: String,
+  league_id: String
 })
 
 // var LeagueSchema = new Schema({

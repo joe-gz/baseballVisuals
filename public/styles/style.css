@@ -9,26 +9,23 @@
 html {
   margin: 0px;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: auto; }
 
 body {
   margin: 0px;
-  width: 100%;
-  font-family: "Josefin Sans"; }
-
-.container {
-  margin: 0px;
   height: 100%;
   width: 100%;
+  font-family: "Josefin Sans";
+  overflow: auto;
   background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
   background-attachment: fixed;
-  background-size: cover;
-  overflow: auto; }
+  background-size: cover; }
 
 .visuals {
   color: #d62d34; }
 
-main {
+.container {
   margin: 0px;
   min-height: 100%;
   width: 100%;
@@ -37,7 +34,7 @@ main {
 .data-container {
   padding-top: 7%; }
 
-.league-search {
+.league-search, .comment-form {
   font-family: "Josefin Sans";
   max-width: 85%;
   width: 20em;
@@ -46,7 +43,9 @@ main {
   margin-bottom: 1%;
   border: none;
   font-size: 1.15em;
-  padding: 1em 1.25em;
+  padding: 1em 1.25em; }
+
+.league-search {
   margin: 0.5em 0;
   background: rgba(255, 255, 255, 0.33);
   transition: all ease 0.33s; }
@@ -62,7 +61,7 @@ main {
 ::-moz-placeholder {
   color: #fff; }
 
-.search-link {
+.search-link, .comment-form-submit {
   font-family: "Josefin Sans";
   font-size: 1.15em;
   max-width: 85%;
@@ -76,8 +75,16 @@ main {
   display: block;
   text-decoration: none;
   transition: background ease 0.33s; }
-  .search-link:hover {
+  .search-link:hover, .comment-form-submit:hover {
     background: #991e23; }
+
+.comment-form {
+  color: #E5E5E5;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.33);
+  transition: all ease 0.33s; }
+  .comment-form:focus {
+    background: rgba(0, 0, 0, 0.75); }
 
 h2, h3 {
   margin: 0;

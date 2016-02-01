@@ -27,11 +27,10 @@
     <h3>
       Player Draft Prices
     </h3>
-    <button ng-click="clickBar()">Show Bars</button>
-    <button ng-click="clickBubble()">Show Bubbles</button>
+    <!-- <button ng-click="clickBar()">Show Bars</button>
+    <button ng-click="clickBubble()">Show Bubbles</button> -->
     <div class="chart-wrapper">
-      <bar-chart ng-show="barChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone">hello</bar-chart>
-      <bubble-chart ng-show="bubbleChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone">Hello</bubble-chart>
+      <bar-chart filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bar-chart>
     </div>
   </div>
 

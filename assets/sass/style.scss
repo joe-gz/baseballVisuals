@@ -37,6 +37,7 @@ html {
   margin: 0px;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 body {
@@ -44,23 +45,27 @@ body {
   height: 100%;
   width: 100%;
   font-family: $textFont;
+  overflow: auto;
+  background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.container {
-  margin: 0px;
-  height: 100%;
-  width: 100%;
-  background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
-  // opacity: 0.2;
-  background-size: cover;
-  overflow: auto;
-}
+// .container {
+//   margin: 0px;
+//   height: 100%;
+//   width: 100%;
+//   background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
+//   background-attachment: fixed;
+//   background-size: cover;
+//   overflow: auto;
+// }
 
 .visuals{
   color: $colorPrimary;
 }
 
-main {
+.container {
   margin: 0px;
   min-height: 100%;
   width: 100%;
@@ -71,7 +76,7 @@ main {
   padding-top: 7%;
 }
 
-.league-search {
+.league-search,.comment-form {
   font-family: $textFont;
   max-width: 85%;
   width: 20em;
@@ -81,6 +86,9 @@ main {
   border: none;
   font-size: 1.15em;
   padding: 1em 1.25em;
+}
+
+.league-search {
   margin: 0.5em 0;
   background: fade-out($colorWhite, 0.67);
   transition: all ease 0.33s;
@@ -102,7 +110,7 @@ main {
   color: $colorWhite;
 }
 
-.search-link {
+.search-link,.comment-form-submit {
   font-family: $textFont;
   font-size: 1.15em;
   max-width: 85%;
@@ -121,14 +129,17 @@ main {
     background: darken($colorPrimary,15%);
   }
 }
-//
-// .player-card-title {
-//   padding-top: 1%;
-//   padding-bottom: 1%;
-//   font-size: 1.3em;
-//   color:$darkFontColor;
-//   background: linear-gradient(rgba(225,225,225,0.9), rgba(225,225,225,0.5));
-// }
+
+.comment-form {
+  color: $lightFontColor;
+  margin: 0;
+  background: fade-out(black, 0.67);
+  transition: all ease 0.33s;
+
+  &:focus {
+    background: fade-out(black, 0.25);;
+  }
+}
 
 h2, h3 {
   margin: 0;
@@ -267,45 +278,50 @@ nav a {
 .circle:hover{
   fill-opacity: 0.6;
 }
+//
+// .player-card {
+//   margin: 1%;
+//   text-decoration: none;
+//   color:$lightFontColor;
+//   background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
+//   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+// }
+//
+// .player-card:hover {
+//   box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+// }
 
 .player-card {
+  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  color: $lightFontColor;
   margin: 1%;
+  padding: 0.5em;
+  position: relative;
   text-decoration: none;
-  color:$lightFontColor;
-  background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+  transition: all ease 0.33s;
+  top: 0;
+  transform: none;
 }
-
 .player-card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
+  top: -0.4em;
+  transform: scale(1.05,1.05);
+}
+.player-card::before {
+  background: #d62d34 none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 4em;
+  left: calc(50% - 2em);
+  position: absolute;
+  // top: 0.8em;
+  width: 4em;
 }
 
-// .player-card {
-//   background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
-//   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
-//   color: $lightFontColor;
-//   margin: 1%;
-//   padding: 0.5em;
-//   position: relative;
-//   text-decoration: none;
-//   transition: all ease 0.33s;
-//   top: 0;
-//   transform: none;
-// }
-// .player-card:hover {
-//   top: -0.4em;
-//   transform: scale(1.05,1.05);
-// }
-// .player-card::before {
-//   background: #d62d34 none repeat scroll 0 0;
-//   border-radius: 50%;
-//   content: "";
-//   height: 4em;
-//   left: calc(50% - 2em);
-//   position: absolute;
-//   // top: 0.8em;
-//   width: 4em;
-// }
+.player-profile-pic {
+  position: relative;
+  border-radius: 50%;
+}
 
 .player-link,.player-card p {
   text-decoration: none;
@@ -313,8 +329,13 @@ nav a {
   font-family: $textFont;
 }
 
+.player-link,.player-price {
+  font-size: 1.3em;
+  color: #d62d34;
+}
+
 .player-link:hover {
-  color:tomato;
+  color:blue;
 }
 
 .single-player {

@@ -7,6 +7,16 @@ angular.module('leagues').controller('LeagueShowController', function(
   DraftFactory,
   CommentFactory){
 
+    // $scope.clickBubble = function (){
+    //   $scope.bubbleChart = true;
+    //   $scope.barChart = false;
+    // }
+    //
+    // $scope.clickBar = function (){
+    //   $scope.bubbleChart = false;
+    //   $scope.barChart = true;
+    // }
+
     $scope.playerCount = 0;
     $scope.resultsArray = [];
     $scope.commentsArray = [];
@@ -73,6 +83,7 @@ angular.module('leagues').controller('LeagueShowController', function(
     $scope.addPlayerData = function(index, playerID){
       // grabs individual player data from player-specific documents and pushes to resultsArray
       DraftFactory.getPlayerData(playerID).then(function(playerData){
+        console.log(playerData);
         $scope.resultsArray[index].playerName = playerData.data.query.results.player.name.full;
         $scope.resultsArray[index].photo = playerData.data.query.results.player.headshot.url;
         $scope.resultsArray[index].position = playerData.data.query.results.player.display_position;

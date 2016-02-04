@@ -10,6 +10,10 @@ $colorSecondary: #ddd944;
 $colorTertiary: #126EA8;
 $colorWhite:#fff;
 $buttonBorderRadius: 1em;
+$num-colors: 100;
+$base-color: $colorPrimary;
+$spectrum: 330deg;
+$offset: 0deg;
 
 
 @function contrastingColor($bgcolor){
@@ -23,6 +27,16 @@ $buttonBorderRadius: 1em;
 @mixin backgroundToFont($background) {
   color:contrastingColor($background);
   background-color:$background;
+}
+
+@for $i from 0 to $num-colors {
+  .color-#{$i} {
+    $adjusted-color: adjust-hue($base-color, $offset - $spectrum / $num-colors * $i);
+
+    &.bar {
+      background: $adjusted-color;
+    }
+  }
 }
 
 * {
@@ -50,16 +64,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
-// .container {
-//   margin: 0px;
-//   height: 100%;
-//   width: 100%;
-//   background: url("http://i.imgur.com/LtEagrn.jpg") no-repeat center center fixed;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   overflow: auto;
-// }
 
 .visuals{
   color: $colorPrimary;
@@ -94,7 +98,7 @@ body {
   transition: all ease 0.33s;
 
   &:focus {
-    background: fade-out($colorWhite, 0.25);;
+    background: fade-out($colorWhite, 0.25);
   }
 }
 
@@ -110,11 +114,9 @@ body {
   color: $colorWhite;
 }
 
-.search-link,.comment-form-submit {
+.search-link,.comment-form-submit, .chart-buttons {
   font-family: $textFont;
   font-size: 1.15em;
-  max-width: 85%;
-  width: 20em;
   border: none;
   border-radius: $buttonBorderRadius;
   background: $colorPrimary;
@@ -130,14 +132,37 @@ body {
   }
 }
 
+.chart-button-row {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.search-link,.comment-form-submit {
+  max-width: 85%;
+  width: 20em;
+}
+
+.chart-buttons {
+  margin: 0 auto;
+  width: 67%;
+}
+
 .comment-form {
-  color: $lightFontColor;
+  color: $darkFontColor;
   margin: 0;
-  background: fade-out(black, 0.67);
+  background: $colorWhite;
   transition: all ease 0.33s;
 
-  &:focus {
-    background: fade-out(black, 0.25);;
+  &:placeholder-shown {
+    color: #333;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #333;
+  }
+
+  &::-moz-placeholder {
+    color: #333;
   }
 }
 
@@ -165,7 +190,7 @@ h3 {
 }
 
 .player-card-title,.results h3 {
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 .league-name {
@@ -204,7 +229,7 @@ nav a {
   width: 75%;
   margin-left: 12.5%;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   font-family: $textFont;
   color: $lightFontColor;
   text-decoration: none;
@@ -236,17 +261,26 @@ nav a {
   margin: 0 auto;
 }
 
+.html-chart {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 75%;
+  margin-left: 12.5%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
 .chart,.bubble {
   background: rgba(0,0,0,0.7);
   border-radius: 10px;
 }
 
-.chart {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  width: 75%;
-  margin-left: 12.5%;
-}
+// .chart {
+//   padding-top: 1%;
+//   padding-bottom: 1%;
+//   width: 75%;
+//   margin-left: 12.5%;
+// }
 
 .bar {
   width: 0;
@@ -272,24 +306,12 @@ nav a {
 
 .bubble {
   width: 75%;
-  margin-bottom: 5%;
+  margin-bottom: 2.5%;
 }
 
 .circle:hover{
   fill-opacity: 0.6;
 }
-//
-// .player-card {
-//   margin: 1%;
-//   text-decoration: none;
-//   color:$lightFontColor;
-//   background: linear-gradient(to top, rgba(225,225,225,0.9), rgba(225,225,225,0.5));
-//   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
-// }
-//
-// .player-card:hover {
-//   box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.8);
-// }
 
 .player-card {
   background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
@@ -314,7 +336,6 @@ nav a {
   height: 4em;
   left: calc(50% - 2em);
   position: absolute;
-  // top: 0.8em;
   width: 4em;
 }
 
@@ -356,14 +377,23 @@ nav a {
 }
 
 .comment-section {
+  margin-top: 2.5%;
   padding-top: 2%;
-  background-color: white;
+  background-color: rgba(255,255,255,0.9);
   text-decoration: none;
   padding-bottom: 3%;
 }
 
 .comment-section h2 {
   padding-top: 1%;
+}
+
+.comment-section p {
+  background: #f9f9f9;
+  display: inline-block;
+  padding: 1em;
+  margin: 0.75em;
+  border-radius: 1em;
 }
 
 .comment-section h2, .comment-section div, .comment-section a {

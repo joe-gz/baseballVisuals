@@ -1,5 +1,305 @@
 @import url(https://fonts.googleapis.com/css?family=Playball);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+.color-0.bar {
+  background: #d62d34; }
+
+.color-1.bar {
+  background: #d62d3d; }
+
+.color-2.bar {
+  background: #d62d47; }
+
+.color-3.bar {
+  background: #d62d50; }
+
+.color-4.bar {
+  background: #d62d59; }
+
+.color-5.bar {
+  background: #d62d62; }
+
+.color-6.bar {
+  background: #d62d6c; }
+
+.color-7.bar {
+  background: #d62d75; }
+
+.color-8.bar {
+  background: #d62d7e; }
+
+.color-9.bar {
+  background: #d62d88; }
+
+.color-10.bar {
+  background: #d62d91; }
+
+.color-11.bar {
+  background: #d62d9a; }
+
+.color-12.bar {
+  background: #d62da4; }
+
+.color-13.bar {
+  background: #d62dad; }
+
+.color-14.bar {
+  background: #d62db6; }
+
+.color-15.bar {
+  background: #d62dbf; }
+
+.color-16.bar {
+  background: #d62dc9; }
+
+.color-17.bar {
+  background: #d62dd2; }
+
+.color-18.bar {
+  background: #d12dd6; }
+
+.color-19.bar {
+  background: #c72dd6; }
+
+.color-20.bar {
+  background: #be2dd6; }
+
+.color-21.bar {
+  background: #b52dd6; }
+
+.color-22.bar {
+  background: #ac2dd6; }
+
+.color-23.bar {
+  background: #a22dd6; }
+
+.color-24.bar {
+  background: #992dd6; }
+
+.color-25.bar {
+  background: #902dd6; }
+
+.color-26.bar {
+  background: #862dd6; }
+
+.color-27.bar {
+  background: #7d2dd6; }
+
+.color-28.bar {
+  background: #742dd6; }
+
+.color-29.bar {
+  background: #6a2dd6; }
+
+.color-30.bar {
+  background: #612dd6; }
+
+.color-31.bar {
+  background: #582dd6; }
+
+.color-32.bar {
+  background: #4f2dd6; }
+
+.color-33.bar {
+  background: #452dd6; }
+
+.color-34.bar {
+  background: #3c2dd6; }
+
+.color-35.bar {
+  background: #332dd6; }
+
+.color-36.bar {
+  background: #2d31d6; }
+
+.color-37.bar {
+  background: #2d3ad6; }
+
+.color-38.bar {
+  background: #2d43d6; }
+
+.color-39.bar {
+  background: #2d4dd6; }
+
+.color-40.bar {
+  background: #2d56d6; }
+
+.color-41.bar {
+  background: #2d5fd6; }
+
+.color-42.bar {
+  background: #2d68d6; }
+
+.color-43.bar {
+  background: #2d72d6; }
+
+.color-44.bar {
+  background: #2d7bd6; }
+
+.color-45.bar {
+  background: #2d84d6; }
+
+.color-46.bar {
+  background: #2d8ed6; }
+
+.color-47.bar {
+  background: #2d97d6; }
+
+.color-48.bar {
+  background: #2da0d6; }
+
+.color-49.bar {
+  background: #2da9d6; }
+
+.color-50.bar {
+  background: #2db3d6; }
+
+.color-51.bar {
+  background: #2dbcd6; }
+
+.color-52.bar {
+  background: #2dc5d6; }
+
+.color-53.bar {
+  background: #2dcfd6; }
+
+.color-54.bar {
+  background: #2dd6d4; }
+
+.color-55.bar {
+  background: #2dd6cb; }
+
+.color-56.bar {
+  background: #2dd6c1; }
+
+.color-57.bar {
+  background: #2dd6b8; }
+
+.color-58.bar {
+  background: #2dd6af; }
+
+.color-59.bar {
+  background: #2dd6a6; }
+
+.color-60.bar {
+  background: #2dd69c; }
+
+.color-61.bar {
+  background: #2dd693; }
+
+.color-62.bar {
+  background: #2dd68a; }
+
+.color-63.bar {
+  background: #2dd680; }
+
+.color-64.bar {
+  background: #2dd677; }
+
+.color-65.bar {
+  background: #2dd66e; }
+
+.color-66.bar {
+  background: #2dd665; }
+
+.color-67.bar {
+  background: #2dd65b; }
+
+.color-68.bar {
+  background: #2dd652; }
+
+.color-69.bar {
+  background: #2dd649; }
+
+.color-70.bar {
+  background: #2dd63f; }
+
+.color-71.bar {
+  background: #2dd636; }
+
+.color-72.bar {
+  background: #2dd62d; }
+
+.color-73.bar {
+  background: #37d62d; }
+
+.color-74.bar {
+  background: #40d62d; }
+
+.color-75.bar {
+  background: #49d62d; }
+
+.color-76.bar {
+  background: #52d62d; }
+
+.color-77.bar {
+  background: #5cd62d; }
+
+.color-78.bar {
+  background: #65d62d; }
+
+.color-79.bar {
+  background: #6ed62d; }
+
+.color-80.bar {
+  background: #78d62d; }
+
+.color-81.bar {
+  background: #81d62d; }
+
+.color-82.bar {
+  background: #8ad62d; }
+
+.color-83.bar {
+  background: #93d62d; }
+
+.color-84.bar {
+  background: #9dd62d; }
+
+.color-85.bar {
+  background: #a6d62d; }
+
+.color-86.bar {
+  background: #afd62d; }
+
+.color-87.bar {
+  background: #b9d62d; }
+
+.color-88.bar {
+  background: #c2d62d; }
+
+.color-89.bar {
+  background: #cbd62d; }
+
+.color-90.bar {
+  background: #d5d62d; }
+
+.color-91.bar {
+  background: #d6ce2d; }
+
+.color-92.bar {
+  background: #d6c52d; }
+
+.color-93.bar {
+  background: #d6bc2d; }
+
+.color-94.bar {
+  background: #d6b22d; }
+
+.color-95.bar {
+  background: #d6a92d; }
+
+.color-96.bar {
+  background: #d6a02d; }
+
+.color-97.bar {
+  background: #d6962d; }
+
+.color-98.bar {
+  background: #d68d2d; }
+
+.color-99.bar {
+  background: #d6842d; }
+
 * {
   box-sizing: border-box; }
 
@@ -61,11 +361,9 @@ body {
 ::-moz-placeholder {
   color: #fff; }
 
-.search-link, .comment-form-submit {
+.search-link, .comment-form-submit, .chart-buttons {
   font-family: "Josefin Sans";
   font-size: 1.15em;
-  max-width: 85%;
-  width: 20em;
   border: none;
   border-radius: 1em;
   background: #d62d34;
@@ -75,16 +373,32 @@ body {
   display: block;
   text-decoration: none;
   transition: background ease 0.33s; }
-  .search-link:hover, .comment-form-submit:hover {
+  .search-link:hover, .comment-form-submit:hover, .chart-buttons:hover {
     background: #991e23; }
 
+.chart-button-row {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%; }
+
+.search-link, .comment-form-submit {
+  max-width: 85%;
+  width: 20em; }
+
+.chart-buttons {
+  margin: 0 auto;
+  width: 67%; }
+
 .comment-form {
-  color: #E5E5E5;
+  color: #3A383B;
   margin: 0;
-  background: rgba(0, 0, 0, 0.33);
+  background: #fff;
   transition: all ease 0.33s; }
-  .comment-form:focus {
-    background: rgba(0, 0, 0, 0.75); }
+  .comment-form:placeholder-shown {
+    color: #333; }
+  .comment-form::-webkit-input-placeholder {
+    color: #333; }
+  .comment-form::-moz-placeholder {
+    color: #333; }
 
 h2, h3 {
   margin: 0;
@@ -106,7 +420,7 @@ h3 {
   padding-bottom: 2%; }
 
 .player-card-title, .results h3 {
-  font-size: 1.5em; }
+  font-size: 3em; }
 
 .league-name {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
@@ -141,7 +455,7 @@ nav a {
   width: 75%;
   margin-left: 12.5%;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   font-family: "Josefin Sans";
   color: #E5E5E5;
   text-decoration: none;
@@ -169,15 +483,17 @@ nav a {
   text-align: center;
   margin: 0 auto; }
 
-.chart, .bubble {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px; }
-
-.chart {
+.html-chart {
   padding-top: 1%;
   padding-bottom: 1%;
   width: 75%;
-  margin-left: 12.5%; }
+  margin-left: 12.5%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px; }
+
+.chart, .bubble {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px; }
 
 .bar {
   width: 0;
@@ -199,7 +515,7 @@ nav a {
 
 .bubble {
   width: 75%;
-  margin-bottom: 5%; }
+  margin-bottom: 2.5%; }
 
 .circle:hover {
   fill-opacity: 0.6; }
@@ -260,13 +576,21 @@ nav a {
   width: 20%; }
 
 .comment-section {
+  margin-top: 2.5%;
   padding-top: 2%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   padding-bottom: 3%; }
 
 .comment-section h2 {
   padding-top: 1%; }
+
+.comment-section p {
+  background: #f9f9f9;
+  display: inline-block;
+  padding: 1em;
+  margin: 0.75em;
+  border-radius: 1em; }
 
 .comment-section h2, .comment-section div, .comment-section a {
   font-family: "Josefin Sans";

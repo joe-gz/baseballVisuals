@@ -27,10 +27,19 @@
     <h3>
       Player Draft Prices
     </h3>
-    <!-- <button ng-click="clickBar()">Show Bars</button>
-    <button ng-click="clickBubble()">Show Bubbles</button> -->
-    <div class="chart-wrapper">
-      <bar-chart filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bar-chart>
+    <div class = "row chart-button-row">
+      <div class="column column-6">
+        <button class = "chart-buttons" ng-click="clickBubble()">Show Bubbles</button>
+      </div>
+      <div class="column column-6">
+        <button class = "chart-buttons" ng-click="clickBar()">Show Bars</button>
+      </div>
+    </div>
+    <bar-chart ng-show = "bubbleChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bar-chart>
+    <div ng-show = "barChart" class = "html-chart">
+      <div data-ng-repeat="player in resultsArray | filter:positionFilter | filter:customFilter" class="bar color-{{player.cost}}" style="width: {{player.cost}}%">
+        {{ player.playerName }} ${{player.cost}}
+      </div>
     </div>
   </div>
 

@@ -32,7 +32,7 @@
         function filterWatch(newValue, oldValue) {
           console.log(this)
 
-          $('.chart').remove();
+          // $('.chart').remove();
           $('.bubble').remove();
           scope.data = [];
           if (newValue.round === 'Show All') {
@@ -139,18 +139,18 @@
           render(scope.data)
           // *******************************************************
 
-
-          color    = d3.scale.category10();
-          var bar = chart.append("div").attr("class", "chart").attr("ng-show", "barChart")
-          .selectAll('div')
-          .data(scope.data).enter();
-
-          bar.append("div")
-          .attr("class", "bar")
-          .transition().ease("elastic")
-          .style("width", function(d) { return d.cost + "%"; })
-          .style("background-color", function(d) { return color(d.cost); })
-          .text(function(d) { return d.playerName +" $"+ d.cost; });
+          //
+          // color    = d3.scale.category10();
+          // var bar = chart.append("div").attr("class", "chart").attr("ng-show", "barChart")
+          // .selectAll('div')
+          // .data(scope.data).enter();
+          //
+          // bar.append("div")
+          // .attr("class", "bar")
+          // .transition().ease("elastic")
+          // .style("width", function(d) { return d.cost + "%"; })
+          // .style("background-color", function(d) { return color(d.cost); })
+          // .text(function(d) { return d.playerName +" $"+ d.cost; });
           //a little of magic: setting it's width based
           //on the data value (d)
           //and text all with a smooth transition

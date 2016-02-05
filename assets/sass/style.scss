@@ -146,7 +146,7 @@ body {
 }
 
 .active {
-  background: #63a313;
+  background: darken($colorPrimary,15%);
 }
 
 .chart-button-row {

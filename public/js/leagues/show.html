@@ -4,22 +4,28 @@
   <div class = "row filter">
     <div class = "column column-6">
       <label>Filter by Round</label>
+
+      <!-- <div class="wrapper-dropdown" ng-click="active = !active" ng-class="{'active': active, 'non-active': !active}">
+        Pick Round
+        <ul class = "dropdown" name="round" id="round" ng-model="filterRound.result">
+          <li class = "round-option" data-ng-repeat="draft in roundArray.rounds">
+            {{draft.round}}
+          </li>
+        </ul>
+      </div> -->
+
       <form name="roundDropdown">
-        <!-- <label for="round"> Round: </label> -->
-        <select name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
+        <select class = "filter-dropdowns" name="round" id="round" ng-model="filterRound.result" ng-options="draft.round for draft in roundArray.rounds">
         </select>
       </form>
-      <!-- <tt>round = {{filterRound.result.round}}</tt> -->
     </div>
 
     <div class = "column column-6">
       <label>Filter by Position</label>
       <form name="positionDropdown">
-        <!-- <label for="position"> Position: </label> -->
-        <select name="position" id="position" ng-model="filterPosition.result" ng-options="draft.position for draft in positionArray.positions">
+        <select class = "filter-dropdowns" name="position" id="position" ng-model="filterPosition.result" ng-options="draft.position for draft in positionArray.positions">
         </select>
       </form>
-      <!-- <tt>position = {{filterPosition.result.position}}</tt> -->
     </div>
   </div>
 
@@ -29,10 +35,10 @@
     </h3>
     <div class = "row chart-button-row">
       <div class="column column-6">
-        <button class = "chart-buttons" ng-click="clickBubble()">Show Bubbles</button>
+        <button class = "chart-buttons chart-buttons-bubble" ng-click="clickBubble()" ng-class="{'active': bubbleChart}">Show Bubbles</button>
       </div>
       <div class="column column-6">
-        <button class = "chart-buttons" ng-click="clickBar()">Show Bars</button>
+        <button class = "chart-buttons chart-buttons-bar" ng-click="clickBar()" ng-class="{'active': barChart}">Show Bars</button>
       </div>
     </div>
     <bar-chart ng-show = "bubbleChart" filter-round="filterRound.result" filter-position="filterPosition.result" chart-data="resultsArray" ng-if="contentDone"></bar-chart>

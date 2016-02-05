@@ -114,11 +114,24 @@ body {
   color: $colorWhite;
 }
 
+.search-link,.comment-form-submit {
+  border-radius: $buttonBorderRadius;
+}
+
+.chart-buttons-bubble {
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
+}
+
+.chart-buttons-bar {
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
 .search-link,.comment-form-submit, .chart-buttons {
   font-family: $textFont;
   font-size: 1.15em;
   border: none;
-  border-radius: $buttonBorderRadius;
   background: $colorPrimary;
   color: $lightFontColor;
   padding: 0.67em;
@@ -127,14 +140,22 @@ body {
   text-decoration: none;
   transition: background ease 0.33s;
 
-  &:hover {
-    background: darken($colorPrimary,15%);
-  }
+  // &:hover {
+  //   background: darken($colorPrimary,15%);
+  // }
+}
+
+.active {
+  background: #63a313;
 }
 
 .chart-button-row {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.chart-button-row div {
+  width: 50%;
 }
 
 .search-link,.comment-form-submit {
@@ -144,7 +165,8 @@ body {
 
 .chart-buttons {
   margin: 0 auto;
-  width: 67%;
+  width: 100%;
+  margin-bottom: 1%;
 }
 
 .comment-form {
@@ -239,13 +261,20 @@ nav a {
 .filter label {
   display: block;
   font-size: 0.85em;
-  text-align: left;
+  text-align: center;
 }
+
 .filter select {
+  font-family: "Josefin Sans";
+  border: none;
+  border-radius: 1em;
+  background: $lightFontColor;
+  color: $darkFontColor;
+  padding: 2.5%;
   display: block;
-  margin: 0.5em 0;
-  padding: 0;
-  width: 100%;
+  text-decoration: none;
+  transition: background ease 0.33s;
+  font-size: 0.8em;
 }
 
 .filter select option {
@@ -254,6 +283,17 @@ nav a {
   margin: 0;
   padding: 0.5em;
   width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-dropdowns {
+  margin: 0 auto;
+  width: 75%;
 }
 
 .league-form,.view-frame {

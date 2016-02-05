@@ -361,11 +361,21 @@ body {
 ::-moz-placeholder {
   color: #fff; }
 
+.search-link, .comment-form-submit {
+  border-radius: 1em; }
+
+.chart-buttons-bubble {
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em; }
+
+.chart-buttons-bar {
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em; }
+
 .search-link, .comment-form-submit, .chart-buttons {
   font-family: "Josefin Sans";
   font-size: 1.15em;
   border: none;
-  border-radius: 1em;
   background: #d62d34;
   color: #E5E5E5;
   padding: 0.67em;
@@ -373,12 +383,16 @@ body {
   display: block;
   text-decoration: none;
   transition: background ease 0.33s; }
-  .search-link:hover, .comment-form-submit:hover, .chart-buttons:hover {
-    background: #991e23; }
+
+.active {
+  background: #63a313; }
 
 .chart-button-row {
-  margin-top: 2.5%;
-  margin-bottom: 2.5%; }
+  width: 75%;
+  margin-left: 12.5%; }
+
+.chart-button-row div {
+  width: 50%; }
 
 .search-link, .comment-form-submit {
   max-width: 85%;
@@ -386,7 +400,8 @@ body {
 
 .chart-buttons {
   margin: 0 auto;
-  width: 67%; }
+  width: 100%;
+  margin-bottom: 1%; }
 
 .comment-form {
   color: #3A383B;
@@ -464,13 +479,19 @@ nav a {
 .filter label {
   display: block;
   font-size: 0.85em;
-  text-align: left; }
+  text-align: center; }
 
 .filter select {
+  font-family: "Josefin Sans";
+  border: none;
+  border-radius: 1em;
+  background: #E5E5E5;
+  color: #3A383B;
+  padding: 2.5%;
   display: block;
-  margin: 0.5em 0;
-  padding: 0;
-  width: 100%; }
+  text-decoration: none;
+  transition: background ease 0.33s;
+  font-size: 0.8em; }
 
 .filter select option {
   display: block;
@@ -478,6 +499,15 @@ nav a {
   margin: 0;
   padding: 0.5em;
   width: 100%; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.filter-dropdowns {
+  margin: 0 auto;
+  width: 75%; }
 
 .league-form, .view-frame {
   text-align: center;
